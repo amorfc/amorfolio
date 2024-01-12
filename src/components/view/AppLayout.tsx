@@ -1,9 +1,13 @@
 import { PropsWithChildren } from "react";
+import { PropsWithTwClassName } from "../../common/propsInterfaces";
+import { twMerge } from "tailwind-merge";
 
-interface AppLayoutProps extends PropsWithChildren {}
+interface AppLayoutProps extends PropsWithChildren, PropsWithTwClassName {}
 
 const AppLayout = (props: AppLayoutProps) => {
-  return <div className="flex bg-secondary h-full p-10">{props.children}</div>;
+  const { className } = props;
+  const baseClassName = twMerge("flex bg-secondary h-full p-10", className);
+  return <div className={baseClassName}>{props.children}</div>;
 };
 
 export default AppLayout;
