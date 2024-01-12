@@ -6,7 +6,7 @@ interface BaseViewProps extends PropsWithChildren, PropsWithTwClassName {}
 
 const BaseView = (props: BaseViewProps) => {
   const { children, className } = props;
-  const style = twMerge("flex-1 p-2 rounded-3xl neu", className);
+  const style = twMerge("flex flex-1 flex-col", className);
 
   return <div className={style}>{children}</div>;
 };
