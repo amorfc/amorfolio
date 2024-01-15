@@ -6,6 +6,8 @@
 :root {
   margin: 0;
   height: 100vh;
+  --neu-shadow: 9px 9px 15px #3c3c3c, -9px -9px 15px #464646;
+  --neu-inset-shadow: inset 9px 9px 15px #3c3c3c, inset -9px -9px 15px #464646;
 }
 
 html,
@@ -14,9 +16,22 @@ body {
   height: 100vh;
 }
 
-.neu {
+.neu-rectangle {
   background: #414141;
-  box-shadow: 9px 9px 15px #3c3c3c, -9px -9px 15px #464646;
+  box-shadow: var(--neu-shadow);
+}
+
+.neu-rectangle > .inset {
+  box-shadow: var(--neu-inset-shadow);
+}
+
+.neu-circle {
+  background: linear-gradient(145deg, #373737, #4b4b4b);
+  box-shadow: var(--neu-shadow);
+}
+
+.neu-circle > .inset {
+  box-shadow: var(--neu-inset-shadow);
 }
 
 button {

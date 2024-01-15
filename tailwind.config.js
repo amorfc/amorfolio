@@ -8,9 +8,7 @@ export default {
         secondary: "#414141",
         ternary: "#313131",
         danger: "#CA3E47",
-      },
-      boxShadow: {
-        "neu-primary": ["20px 20px 60px #414141", "-20px -20px 60px #525252"],
+        mediumgrey: "#7F7F7F",
       },
     },
   },
