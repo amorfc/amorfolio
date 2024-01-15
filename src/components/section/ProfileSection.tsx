@@ -1,6 +1,6 @@
 import { profileSection } from "../../data/profileSection";
 import ProfileImage from "../image/ProfileImage";
-import BaseText from "../text/BaseText";
+import DescriptionText from "../text/DescriptionText";
 import BaseCircleView from "../view/BaseCircleView";
 import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";
@@ -16,10 +16,7 @@ export const ProfileSection = () => {
         </BaseCircleView>
       </BaseView>
       <BaseView className="neu-rectangle inset rounded-3xl basis-[65%] m-5 p-4 md:p-8 text-center items-center justify-center">
-        <BaseText
-          className="sm:text-lg md:text-xl text-center"
-          text={profileSection.profile.description}
-        />
+        <DescriptionText text={profileSection.profile.description} />
       </BaseView>
     </HomeSection>
   );
