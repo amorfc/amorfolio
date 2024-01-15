@@ -1,5 +1,5 @@
 import { profileSection } from "../../data/profileSection";
-import AppImage from "../image/AppImage";
+import ProfileImage from "../image/ProfileImage";
 import BaseText from "../text/BaseText";
 import BaseCircleView from "../view/BaseCircleView";
 import BaseView from "../view/BaseView";
@@ -12,11 +12,7 @@ export const ProfileSection = () => {
     <HomeSection>
       <BaseView className="basis-[35%] items-center justify-center">
         <BaseCircleView className={baseCircleViewClassName}>
-          <AppImage
-            className={"p-4 rounded-full object-cover w-[100%] h-[100%]"}
-            imagePublicUrl={"profile.png"}
-            alt="Profile Photo"
-          />
+          <ProfileImage className="p-4 rounded-full" />
         </BaseCircleView>
       </BaseView>
       <BaseView className="neu-rectangle inset rounded-3xl basis-[65%] m-5 p-4 md:p-8 text-center items-center justify-center">
