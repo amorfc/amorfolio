@@ -16,7 +16,7 @@ function App() {
   );
 
   return (
-    <AppLayout className={"gap-10 flex-col md:flex-row"}>
+    <AppLayout className={"gap-10 flex-col lg:flex-row"}>
       <BaseView className={profileSectionStyle}>
         <ProfileSection />
       </BaseView>
