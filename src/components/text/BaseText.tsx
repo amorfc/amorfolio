@@ -1,5 +1,5 @@
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import { twMerge } from "tailwind-merge";
+import { styleMerge } from "../../utils/styleMerge";
 
 interface BaseTextProps extends PropsWithTwClassName {
   text?: string;
@@ -7,7 +7,7 @@ interface BaseTextProps extends PropsWithTwClassName {
 
 const BaseText = (props: BaseTextProps) => {
   const { text, className } = props;
-  const baseClassName = twMerge(
+  const baseClassName = styleMerge(
     "antialiased hover:subpixel-antialiased overflow-hidden text-mediumgrey",
     className
   );

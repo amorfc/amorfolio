@@ -1,9 +1,9 @@
 // interface ProfileSectionProps{}
 
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
+import { styleMerge } from "../../utils/styleMerge";
 import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";
-import { twMerge } from "tailwind-merge";
 
 interface PortfolioSectionProps extends PropsWithTwClassName {}
 
@@ -12,7 +12,7 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
 
   return (
     <>
-      <BaseView className={twMerge(className, "basis-[80%]")}>
+      <BaseView className={styleMerge(className, "basis-[80%]")}>
         <HomeSection />
         <HomeSection />
       </BaseView>
