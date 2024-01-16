@@ -38,7 +38,7 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
 
   return (
     <>
-      <BaseView className={styleMerge(className, "max-h-[80%] mb-4")}>
+      <BaseView className={styleMerge(className, "max-h-[75%] pb-6")}>
         <HomeSection className="max-h-[50%]">
           <AppSwiper slides={jobExperienceSlides} />
         </HomeSection>
@@ -46,7 +46,7 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
           <AppSwiper slides={jobExperienceSlides} />
         </HomeSection>
       </BaseView>
-      <BaseView className="max-h-[20%]">
+      <BaseView className="max-h-[35%]">
         <HomeSection>
           {/* <AppSwiper slides={jobExperienceSlides} /> */}
         </HomeSection>
