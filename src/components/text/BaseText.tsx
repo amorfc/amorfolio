@@ -1,7 +1,7 @@
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
 import { styleMerge } from "../../utils/styleMerge";
 
-interface BaseTextProps extends PropsWithTwClassName {
+export interface BaseTextProps extends PropsWithTwClassName {
   text?: string;
 }
 
