@@ -1,4 +1,4 @@
-import { Children } from "react";
+import { Children, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   SwiperDirection,
@@ -19,7 +19,14 @@ const AppSwiper = (props: AppSwiperProps) => {
     direction = SwiperDirection.VERTICAL,
   } = props;
 
-  const baseSwiperClassName = styleMerge("w-full h-full", swiperClassName);
+  const baseFlexStyle = useMemo(
+    () =>
+      direction == SwiperDirection.HORIZONTAL
+        ? "w-[100vh] h-full"
+        : "w-full h-[100vh]",
+    [direction]
+  );
+  const baseSwiperClassName = styleMerge(baseFlexStyle, swiperClassName);
 
   return (
     <Swiper
