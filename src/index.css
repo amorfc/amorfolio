@@ -21,7 +21,7 @@ body {
   box-shadow: var(--neu-shadow);
 }
 
-.neu-rectangle > .inset {
+.neu-rectangle > .neu-inset {
   box-shadow: var(--neu-inset-shadow);
 }
 
@@ -30,7 +30,7 @@ body {
   box-shadow: var(--neu-shadow);
 }
 
-.neu-circle > .inset {
+.neu-circle > .neu-inset {
   box-shadow: var(--neu-inset-shadow);
 }
 

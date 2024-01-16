@@ -14,7 +14,7 @@ export const ProfileSection = () => {
           <ProfileImage className="p-4 rounded-full" />
         </BaseCircleView>
       </BaseView>
-      <BaseView className="neu-rectangle inset rounded-3xl basis-[65%] xl:m-5 p-4 text-center items-center justify-center">
+      <BaseView className="neu-rectangle neu-inset rounded-3xl basis-[65%] xl:m-5 p-4 text-center items-center justify-center">
         <DescriptionText text={profileSection.profile.description} />
       </BaseView>
     </HomeSection>
