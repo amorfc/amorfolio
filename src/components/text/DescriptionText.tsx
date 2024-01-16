@@ -5,7 +5,7 @@ interface DescriptionTextProps extends BaseTextProps {}
 const DescriptionText = (props: DescriptionTextProps) => {
   const { text, className } = props;
   const baseDescriptionTextClassName = styleMerge(
-    "sm:text-lg md:text-xl text-center",
+    "sm:text-sm md:text-md lg:text-lg xl:text-xl text-center overflow-hidden",
     className
   );
   return <BaseText text={text} className={baseDescriptionTextClassName} />;
