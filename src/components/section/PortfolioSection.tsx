@@ -1,10 +1,7 @@
 import { createElement, useMemo } from "react";
 import "swiper/css";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import {
-  SwiperDirection,
-  SwiperSlideParams,
-} from "../../constants/swiperConstants";
+import { SwiperSlideParams } from "../../constants/swiperConstants";
 import { experienceData } from "../../data/experience/experienceData";
 import { styleMerge } from "../../utils/styleMerge";
 import AppSwiper from "../swiper/AppSwiper";
@@ -28,16 +25,12 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
 
   return (
     <BaseView className={styleMerge(className)}>
-      <BaseView className="lg:max-h-[75%] gap-y-7 lg:h-full lg:pb-6">
+      <BaseView className="lg:max-h-[75%] gap-y-5 lg:h-full lg:pb-6">
         <HomeSection className={homeSectionPartClassName}>
           <AppSwiper slides={jobExperienceSlides} isAutoPlay />
         </HomeSection>
         <HomeSection className={homeSectionPartClassName}>
-          <AppSwiper
-            slides={jobExperienceSlides}
-            isAutoPlay
-            direction={SwiperDirection.HORIZONTAL}
-          />
+          <AppSwiper slides={jobExperienceSlides} isAutoPlay />
         </HomeSection>
       </BaseView>
       <BaseView className="lg:max-h-[22%]">
