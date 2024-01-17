@@ -5,11 +5,14 @@ import {
   SwiperSlideParams,
 } from "../../constants/swiperConstants";
 import { styleMerge } from "../../utils/styleMerge";
+import { Autoplay } from "swiper/modules";
+import { generateRandomDelay } from "../../utils/randomize";
 
 interface AppSwiperProps {
   slides: SwiperSlideParams[];
   swiperClassName?: string;
   direction?: SwiperDirection;
+  isAutoPlay?: boolean;
 }
 
 const AppSwiper = (props: AppSwiperProps) => {
@@ -17,6 +20,7 @@ const AppSwiper = (props: AppSwiperProps) => {
     slides,
     swiperClassName,
     direction = SwiperDirection.VERTICAL,
+    isAutoPlay = false,
   } = props;
 
   const baseFlexStyle = useMemo(
@@ -28,12 +32,24 @@ const AppSwiper = (props: AppSwiperProps) => {
   );
   const baseSwiperClassName = styleMerge(baseFlexStyle, swiperClassName);
 
+  const autoPlayConfig = useMemo(() => {
+    const randomDelay = generateRandomDelay();
+    const config = { disableOnInteraction: true, delay: randomDelay };
+
+    if (isAutoPlay) {
+      return { config, autoPlayModule: [Autoplay] };
+    }
+    return {};
+  }, [isAutoPlay]);
+
   return (
     <Swiper
       className={baseSwiperClassName}
       autoHeight={true}
       slidesPerView={1}
       mousewheel={true}
+      autoplay={{ ...autoPlayConfig?.config }}
+      modules={[...(autoPlayConfig?.autoPlayModule ?? [])]}
       direction={direction}
     >
       {Children.toArray(

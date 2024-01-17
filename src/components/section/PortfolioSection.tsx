@@ -11,19 +11,6 @@ import ExperienceSection from "./experience/ExperienceSection";
 
 interface PortfolioSectionProps extends PropsWithTwClassName {}
 
-export const Render = () => (
-  <BaseView className="flex-row w-full h-full p-0 m-0">
-    <BaseView className="bg-danger"></BaseView>
-    <BaseView className="bg-white"></BaseView>
-  </BaseView>
-);
-export const Render2 = () => (
-  <BaseView className="flex-row w-full h-full p-0 m-0">
-    <BaseView className="bg-black "></BaseView>
-    <BaseView className="bg-green-600 "></BaseView>
-  </BaseView>
-);
-
 export const PortfolioSection = (props: PortfolioSectionProps) => {
   const { className } = props;
 
@@ -36,21 +23,23 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
     },
   ];
 
+  const homeSectionPartClassName = "max-h-[25vh] lg:max-h-[50%]";
+
   return (
-    <>
-      <BaseView className={styleMerge(className, "max-h-[75%] pb-6")}>
-        <HomeSection className="max-h-[50%]">
-          <AppSwiper slides={jobExperienceSlides} />
+    <BaseView className={styleMerge(className)}>
+      <BaseView className="lg:max-h-[75%] gap-y-7 lg:h-full lg:pb-6">
+        <HomeSection className={homeSectionPartClassName}>
+          <AppSwiper slides={jobExperienceSlides} isAutoPlay />
         </HomeSection>
-        <HomeSection className="max-h-[50%]">
-          <AppSwiper slides={jobExperienceSlides} />
-        </HomeSection>
-      </BaseView>
-      <BaseView className="max-h-[35%]">
-        <HomeSection>
-          {/* <AppSwiper slides={jobExperienceSlides} /> */}
+        <HomeSection className={homeSectionPartClassName}>
+          <AppSwiper slides={jobExperienceSlides} isAutoPlay />
         </HomeSection>
       </BaseView>
-    </>
+      <BaseView className="lg:max-h-[22%]">
+        <HomeSection className="max-h-[15vh] lg:max-h-full">
+          <AppSwiper slides={jobExperienceSlides} isAutoPlay />
+        </HomeSection>
+      </BaseView>
+    </BaseView>
   );
 };
