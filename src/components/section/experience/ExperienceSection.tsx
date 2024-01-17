@@ -1,10 +1,7 @@
-import { SizeContants } from "../../../constants/sizeStyleConstants";
 import { ExperienceType } from "../../../data/experience/experienceData";
-import AppImage from "../../image/AppImage";
-import DescriptionText from "../../text/DescriptionText";
-import TitleText from "../../text/TitleText";
-import BaseCircleView from "../../view/BaseCircleView";
 import BaseView from "../../view/BaseView";
+import ExperienceSectionDescriptionView from "./ExperienceSectionDescriptionView";
+import ExperienceSectionLogo from "./ExperienceSectionLogo";
 
 interface ExperienceSectionProps {
   data: ExperienceType;
@@ -12,32 +9,29 @@ interface ExperienceSectionProps {
 
 const ExperienceSection = (props: ExperienceSectionProps) => {
   const {
-    data: { company, jobTitle, imgPublicUrl, description: shortDescription },
+    data: {
+      company,
+      jobTitle,
+      imgPublicUrl,
+      description: shortDescription,
+      startDate,
+      endDate,
+    },
   } = props;
 
   return (
     <BaseView className="flex-row w-full h-full">
       <BaseView className="basis-[25%] items-center justify-center">
-        <BaseCircleView
-          className="neu-circle neu-inset"
-          size={SizeContants.medium}
-        >
-          <AppImage
-            className="p-4 rounded-full object-cover w-[100%] h-[100%] opacity-80"
-            imagePublicUrl={imgPublicUrl}
-            alt={`${company}_logo_alt`}
-          />
-        </BaseCircleView>
+        <ExperienceSectionLogo imgPublicUrl={imgPublicUrl} company={company} />
       </BaseView>
       <BaseView className="basis-[75%] items-center justify-start px-4 py-8">
-        <BaseView className="flex-row w-full basis-[15%] items-center justify-start">
-          <TitleText text={company} />
-          <TitleText className="mx-2" text={"-"} size={SizeContants.small} />
-          <TitleText text={jobTitle} size={SizeContants.small} />
-        </BaseView>
-        <BaseView className="flex-row w-full basis-[85%] items-center justify-center">
-          <DescriptionText text={shortDescription} />
-        </BaseView>
+        <ExperienceSectionDescriptionView
+          company={company}
+          shortDescription={shortDescription}
+          startDate={startDate}
+          endDate={endDate}
+          jobTitle={jobTitle}
+        />
       </BaseView>
     </BaseView>
   );
