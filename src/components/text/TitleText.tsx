@@ -12,11 +12,11 @@ const TitleText = (props: TitleTextProps) => {
   const sizeStyle = useMemo(() => {
     switch (size) {
       case SizeContants.small:
-        return "sm:text-xl md:text-2xl";
+        return "sm:text-lg md:text-xl lg:text-2xl";
       case SizeContants.medium:
-        return "sm:text-2xl md:text-3xl";
+        return "sm:text-2xl md:text-3xl lg:text-4xl";
       case SizeContants.large:
-        return "sm:text-4xl md:text-5xl";
+        return "sm:text-4xl md:text-5xl lg:text-6xl";
     }
   }, [size]);
 
