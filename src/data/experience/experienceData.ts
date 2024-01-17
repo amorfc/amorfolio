@@ -10,7 +10,7 @@ export interface ExperienceType {
   location: string;
   startDate: string;
   endDate: string;
-  jobTitle: string;
+  jobTitle?: string;
   description: string;
   techStack: ExperienceTechStackType[];
   imgPublicUrl: ImagePublicUrls;
@@ -21,9 +21,9 @@ export const experienceData: ExperienceType[] = [
   {
     company: "Freelance Software Developer",
     location: "Remote",
-    startDate: "2022-08-01",
+    startDate: "2022 Aug",
     endDate: "Present",
-    jobTitle: "Software Developer",
+    jobTitle: undefined,
     description: `
       Spearheaded the creation of a robust API for a crypto staking service, implementing cutting-edge technologies to ensure seamless functionality. This included designing and optimizing backend processes to facilitate secure and efficient staking operations.
       Crafted an intuitive and user-friendly web interface for the crypto staking service, utilizing modern web development tools. Result: an appealing, responsive interface for seamless staking activity management.
@@ -38,8 +38,8 @@ export const experienceData: ExperienceType[] = [
   {
     company: "Beyn Technology",
     location: "Istanbul",
-    startDate: "2022-09-01",
-    endDate: "2023-08-01",
+    startDate: "2022 Sep",
+    endDate: "2023 Aug",
     jobTitle: "Frontend Developer",
     description: `
       Developed and maintained CRM applications for B2B customers, enhancing customer relations and operational efficiency.
@@ -55,8 +55,8 @@ export const experienceData: ExperienceType[] = [
   {
     company: "KolayBi` Company",
     location: "Istanbul",
-    startDate: "2021-03-01",
-    endDate: "2022-09-01",
+    startDate: "2021 Mar",
+    endDate: "2022 Sep",
     jobTitle: "Full Stack Developer",
     description: `
       Maintained existing applications and designed and delivered new applications.
@@ -72,8 +72,8 @@ export const experienceData: ExperienceType[] = [
   {
     company: "Techbros",
     location: "Istanbul",
-    startDate: "2020-09-01",
-    endDate: "2020-11-01",
+    startDate: "2020 Sep",
+    endDate: "2020 Oct",
     jobTitle: "Mobile Application Developer Intern",
     description: `
       Developed a complex React Native mobile application from scratch, providing pre-accounting services for mid-cap companies. The app handles invoicing, tracking, and management of orders and invoice-related domains from connected e-commerce platforms.
@@ -89,8 +89,8 @@ export const experienceData: ExperienceType[] = [
   {
     company: "Appcent",
     location: "Istanbul",
-    startDate: "2020-07-01",
-    endDate: "2020-09-01",
+    startDate: "2020 Jul",
+    endDate: "2020 Sep",
     jobTitle: "Mobile Application Developer Intern (Android)",
     description: `
       Applied various techniques to locate bugs and errors in applications.
