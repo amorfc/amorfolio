@@ -1,7 +1,10 @@
 import { createElement, useMemo } from "react";
 import "swiper/css";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import { SwiperSlideParams } from "../../constants/swiperConstants";
+import {
+  SwiperDirection,
+  SwiperSlideParams,
+} from "../../constants/swiperConstants";
 import { experienceData } from "../../data/experience/experienceData";
 import { styleMerge } from "../../utils/styleMerge";
 import AppSwiper from "../swiper/AppSwiper";
@@ -30,12 +33,16 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
           <AppSwiper slides={jobExperienceSlides} isAutoPlay />
         </HomeSection>
         <HomeSection className={homeSectionPartClassName}>
-          <AppSwiper slides={jobExperienceSlides} isAutoPlay />
+          <AppSwiper
+            slides={jobExperienceSlides}
+            isAutoPlay
+            direction={SwiperDirection.HORIZONTAL}
+          />
         </HomeSection>
       </BaseView>
       <BaseView className="lg:max-h-[22%]">
         <HomeSection className="max-h-[15vh] lg:max-h-full">
-          <AppSwiper slides={jobExperienceSlides} isAutoPlay />
+          <AppSwiper slides={jobExperienceSlides} />
         </HomeSection>
       </BaseView>
     </BaseView>

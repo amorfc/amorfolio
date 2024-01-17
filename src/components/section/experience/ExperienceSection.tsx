@@ -19,11 +19,11 @@ const ExperienceSection = (props: ExperienceSectionProps) => {
     <BaseView className="flex-row w-full h-full">
       <BaseView className="basis-[25%] items-center justify-center">
         <BaseCircleView
-          className="neu-circle neu-inset opacity-80"
+          className="neu-circle neu-inset"
           size={SizeContants.medium}
         >
           <AppImage
-            className="p-4 rounded-full object-cover w-[100%] h-[100%]"
+            className="p-4 rounded-full object-cover w-[100%] h-[100%] opacity-80"
             imagePublicUrl={imgPublicUrl}
             alt={`${company}_logo_alt`}
           />
