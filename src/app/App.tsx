@@ -8,20 +8,20 @@ import "./App.css";
 function App() {
   const profileSectionStyle = "basis-1/4";
 
-  const gapBetweenPortfolioSections = "gap-y-7";
-  const portfolioSectionStyle = styleMerge(
+  const portfolioSectionWrapperStyle = styleMerge(
     profileSectionStyle,
-    gapBetweenPortfolioSections,
-    "basis-1/2"
+    "basis-1 lg:basis-1/2 gap-y-7"
   );
+
+  const profileSection = styleMerge("gap-y-7 lg:h-full");
 
   return (
     <AppLayout className={"gap-10 flex-col lg:flex-row"}>
       <BaseView className={profileSectionStyle}>
         <ProfileSection />
       </BaseView>
-      <BaseView className={portfolioSectionStyle}>
-        <PortfolioSection className={gapBetweenPortfolioSections} />
+      <BaseView className={portfolioSectionWrapperStyle}>
+        <PortfolioSection className={profileSection} />
       </BaseView>
     </AppLayout>
   );

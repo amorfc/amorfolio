@@ -6,7 +6,10 @@ interface AppLayoutProps extends PropsWithChildren, PropsWithTwClassName {}
 
 const AppLayout = (props: AppLayoutProps) => {
   const { className } = props;
-  const baseClassName = styleMerge("flex bg-secondary h-full p-6", className);
+  const baseClassName = styleMerge(
+    "flex flex-1 bg-secondary lg:h-[100vh] p-6",
+    className
+  );
   return <div className={baseClassName}>{props.children}</div>;
 };
 

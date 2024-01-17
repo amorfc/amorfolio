@@ -5,7 +5,7 @@
 
 :root {
   margin: 0;
-  height: 100vh;
+  background-color: theme("colors.secondary");
   --neu-shadow: 9px 9px 15px #3c3c3c, -9px -9px 15px #464646;
   --neu-inset-shadow: inset 9px 9px 15px #3c3c3c, inset -9px -9px 15px #464646;
 }
