@@ -6,7 +6,7 @@ import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";
 
 export const ProfileSection = () => {
-  const baseCircleViewClassName = "neu-circle m-8";
+  const baseCircleViewClassName = "neu-circle neu-inset opacity-80 m-8";
   return (
     <HomeSection className="overflow-hidden">
       <BaseView className="basis-[35%] items-center justify-center">
