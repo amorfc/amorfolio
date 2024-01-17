@@ -20,6 +20,17 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/components/icon/GENERATED"],
+  "exclude": [
+    "src/components/icon/svg-template.ts",
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "scripts",
+    "test",
+    "tests",
+    "e2e"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
