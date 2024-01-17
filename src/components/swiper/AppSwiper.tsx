@@ -45,9 +45,9 @@ const AppSwiper = (props: AppSwiperProps) => {
   return (
     <Swiper
       className={baseSwiperClassName}
-      autoHeight={true}
       slidesPerView={1}
       mousewheel={true}
+      speed={1600}
       autoplay={{ ...autoPlayConfig?.config }}
       modules={[...(autoPlayConfig?.autoPlayModule ?? [])]}
       direction={direction}
