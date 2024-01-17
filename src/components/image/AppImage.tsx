@@ -1,7 +1,8 @@
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
+import { ImagePublicUrls } from "../../constants/imagePublicUrlConstants";
 
 export interface AppImageProps extends PropsWithTwClassName {
-  imagePublicUrl?: string;
+  imagePublicUrl?: ImagePublicUrls;
   alt: string;
 }
 

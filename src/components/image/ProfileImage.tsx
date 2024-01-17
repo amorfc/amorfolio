@@ -1,3 +1,4 @@
+import { ImagePublicUrls } from "../../constants/imagePublicUrlConstants";
 import { styleMerge } from "../../utils/styleMerge";
 import AppImage, { AppImageProps } from "./AppImage";
 
@@ -12,7 +13,7 @@ const ProfileImage = (props: ProfileImageProps) => {
     <AppImage
       className={baseClassName}
       {...props}
-      imagePublicUrl={"profile.png"}
+      imagePublicUrl={ImagePublicUrls.Profile}
       alt="Profile Photo"
     />
   );
