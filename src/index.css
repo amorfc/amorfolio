@@ -21,16 +21,12 @@ body {
   box-shadow: var(--neu-shadow);
 }
 
-.neu-rectangle > .neu-inset {
-  box-shadow: var(--neu-inset-shadow);
-}
-
 .neu-circle {
   background: linear-gradient(145deg, #373737, #4b4b4b);
   box-shadow: var(--neu-shadow);
 }
 
-.neu-circle > .neu-inset {
+.neu-inset {
   box-shadow: var(--neu-inset-shadow);
 }
 
