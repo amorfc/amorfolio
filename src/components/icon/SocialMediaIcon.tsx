@@ -1,5 +1,10 @@
-import React, { SVGProps, useMemo } from "react";
+import { SVGProps, useCallback } from "react";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
+import { SocialMedia } from "../../constants/common";
+import { IconSize } from "../../constants/sizeStyleConstants";
+import { getSocialMediaRedirectUrl } from "../../utils/redirect";
+import { styleMerge } from "../../utils/styleMerge";
+import { openInNewTab } from "../../utils/window";
 import {
   GithubLogo,
   InstagramLogo,
@@ -7,9 +12,6 @@ import {
   TelegramLogo,
   XLogo,
 } from "./GENERATED";
-import { IconSize } from "../../constants/sizeStyleConstants";
-import { styleMerge } from "../../utils/styleMerge";
-import { SocialMedia } from "../../constants/common";
 
 interface SocialMediaIconProps
   extends PropsWithTwClassName,
@@ -17,33 +19,31 @@ interface SocialMediaIconProps
   socialMedia: SocialMedia;
 }
 
+const SocialMediaComponents = {
+  [SocialMedia.LinkedIn]: LinkedinLogo,
+  [SocialMedia.Github]: GithubLogo,
+  [SocialMedia.Telegram]: TelegramLogo,
+  [SocialMedia.Instagram]: InstagramLogo,
+  [SocialMedia.X]: XLogo,
+};
+
 const SocialMediaIcon = (props: SocialMediaIconProps) => {
   const { socialMedia, className } = props;
+  const SocialMediaComponent = SocialMediaComponents[socialMedia];
 
-  const renderIcon = useMemo(() => {
-    const wh = { width: IconSize.medium, height: IconSize.medium };
-    const finalClassName = styleMerge(
-      "hover:fill-lightgrey fill-mediumgrey",
-      className
-    );
+  const handleOnClick = useCallback(() => {
+    openInNewTab(getSocialMediaRedirectUrl(socialMedia));
+  }, [socialMedia]);
 
-    const finalProps = { className: finalClassName, ...wh, ...props };
+  const wh = { width: IconSize.medium, height: IconSize.medium };
+  const finalClassName = styleMerge(
+    "hover:fill-lightgrey fill-mediumgrey",
+    className
+  );
 
-    switch (socialMedia) {
-      case SocialMedia.LinkedIn:
-        return <LinkedinLogo {...finalProps} />;
-      case SocialMedia.Github:
-        return <GithubLogo {...finalProps} />;
-      case SocialMedia.Telegram:
-        return <TelegramLogo {...finalProps} />;
-      case SocialMedia.Instagram:
-        return <InstagramLogo {...finalProps} />;
-      case SocialMedia.X:
-        return <XLogo {...finalProps} />;
-    }
-  }, [props, socialMedia, className]);
+  const finalProps = { className: finalClassName, ...wh, ...props };
 
-  return <>{renderIcon}</>;
+  return <SocialMediaComponent onClick={handleOnClick} {...finalProps} />;
 };
 
 export default SocialMediaIcon;
