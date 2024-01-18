@@ -2,6 +2,7 @@ export enum SizeContants {
   medium = "medium",
   large = "large",
   small = "small",
+  xsmall = "xsmall",
 }
 
 export const IconSize = {
