@@ -37,7 +37,7 @@ const SocialMediaIcon = (props: SocialMediaIconProps) => {
 
   const wh = { width: IconSize.medium, height: IconSize.medium };
   const finalClassName = styleMerge(
-    "hover:fill-lightgrey fill-mediumgrey",
+    "hover:fill-lightgrey fill-mediumgrey hover:cursor-pointer hover:scale-[1.04]",
     className
   );
 
