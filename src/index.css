@@ -5,7 +5,15 @@
 
 :root {
   margin: 0;
-  background-color: theme("colors.secondary");
+  /* Dark Mode */
+  --color-primary: rgba(82, 82, 82, 1); /* "#525252" */
+  --color-secondary: rgba(65, 65, 65, 1); /* "#414141" */
+  --color-ternary: rgba(49, 49, 49, 1); /* "#313131" */
+  --color-danger: rgba(202, 62, 71, 1); /* "#CA3E47" */
+  --color-hardgrey: rgba(102, 102, 102, 1); /* "#666666" */
+  --color-mediumgrey: rgba(127, 127, 127, 1); /* "#7F7F7F" */
+  --color-lightgrey: rgba(153, 153, 153, 1); /* "#999999" */
+  background-color: var(--color-secondary);
   --neu-shadow: 9px 9px 15px #3c3c3c, -9px -9px 15px #464646;
   --neu-inset-shadow: inset 9px 9px 15px #3c3c3c, inset -9px -9px 15px #464646;
 }

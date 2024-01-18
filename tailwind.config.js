@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#525252",
-        secondary: "#414141",
-        ternary: "#313131",
-        danger: "#CA3E47",
-        hardgrey: "#666666",
-        mediumgrey: "#7F7F7F",
-        lightgrey: "#999999",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        ternary: "var(--color-ternary)",
+        danger: "var(--color-danger)",
+        hardgrey: "var(--color-hardgrey)",
+        mediumgrey: "var(--color-mediumgrey)",
+        lightgrey: "var(--color-lightgrey)",
       },
     },
   },
