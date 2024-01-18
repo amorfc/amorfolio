@@ -14,7 +14,7 @@ interface ExperienceSectionDescriptionViewProps {
 const ExperienceSectionDescriptionView = (
   props: ExperienceSectionDescriptionViewProps
 ) => {
-  const { company, jobTitle, shortDescription, startDate, endDate } = props;
+  const { company, jobTitle, shortDescription, startDate } = props;
   return (
     <>
       <BaseView className="w-full basis-[15%] items-center justify-start">
@@ -32,9 +32,7 @@ const ExperienceSectionDescriptionView = (
           )}
         </BaseView>
         <BaseView className="flex-row w-full items-center justify-start">
-          <SubTitleText text={startDate} />
-          <SubTitleText className="mx-1" text={"-"} />
-          <SubTitleText text={endDate} />
+          <SubTitleText text={startDate} size={SizeContants.xsmall} />
         </BaseView>
       </BaseView>
       <BaseView className="flex-row w-full basis-[85%] items-center justify-center">

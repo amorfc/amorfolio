@@ -21,7 +21,7 @@ export const experienceData: ExperienceType[] = [
   {
     company: "Freelance Software Developer",
     location: "Remote",
-    startDate: "2022 Aug",
+    startDate: "Present",
     endDate: "Present",
     jobTitle: undefined,
     description: `
