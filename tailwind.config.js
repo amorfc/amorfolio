@@ -3,14 +3,17 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        main: "var(--color-secondary)",
+      },
+      textColor: {
+        desc: "var(--color-mediumgrey)",
+        title: "var(--color-lightgrey)",
+        subtitle: "var(--color-hardgrey)",
+      },
       colors: {
-        primary: "var(--color-primary)",
-        secondary: "var(--color-secondary)",
-        ternary: "var(--color-ternary)",
-        danger: "var(--color-danger)",
-        hardgrey: "var(--color-hardgrey)",
-        mediumgrey: "var(--color-mediumgrey)",
-        lightgrey: "var(--color-lightgrey)",
+        icon: "var(--color-lightgrey)",
+        iconActive: "var(--color-mediumgrey)",
       },
     },
   },

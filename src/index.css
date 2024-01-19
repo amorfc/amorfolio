@@ -13,9 +13,18 @@
   --color-hardgrey: rgba(102, 102, 102, 1); /* "#666666" */
   --color-mediumgrey: rgba(127, 127, 127, 1); /* "#7F7F7F" */
   --color-lightgrey: rgba(153, 153, 153, 1); /* "#999999" */
+  --color-neu-shadow-start: rgba(60, 60, 60, 1); /* "#3C3C3C" */
+  --color-neu-shadow-end: rgba(70, 70, 70, 1); /* "#464646" */
+  --color-neu-circle: linear-gradient(
+    145deg,
+    var(--color-neu-shadow-start),
+    var(--color-neu-shadow-end)
+  );
   background-color: var(--color-secondary);
-  --neu-shadow: 9px 9px 15px #3c3c3c, -9px -9px 15px #464646;
-  --neu-inset-shadow: inset 9px 9px 15px #3c3c3c, inset -9px -9px 15px #464646;
+  --neu-shadow: 9px 9px 20px var(--color-neu-shadow-start),
+    -9px -9px 20px var(--color-neu-shadow-end);
+  --neu-inset-shadow: inset 9px 9px 20px var(--color-neu-shadow-start),
+    inset -9px -9px 20px var(--color-neu-shadow-end);
 }
 
 html,
@@ -25,12 +34,12 @@ body {
 }
 
 .neu-rectangle {
-  background: #414141;
+  background: var(--color-secondary);
   box-shadow: var(--neu-shadow);
 }
 
 .neu-circle {
-  background: linear-gradient(145deg, #373737, #4b4b4b);
+  background: var(--color-neu-circle);
   box-shadow: var(--neu-shadow);
 }
 
