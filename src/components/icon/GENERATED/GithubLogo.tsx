@@ -1,6 +1,8 @@
 // Auto-generated file created by svgr-cli source custom svg-template.ts
 // Run pnpm icons:generate to update
 // Do not edit
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import * as React from "react";
 import type { SVGProps } from "react";
 const SvgGithubLogo = (props: SVGProps<SVGSVGElement>) => (

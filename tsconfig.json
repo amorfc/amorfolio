@@ -20,10 +20,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/components/icon/GENERATED/index.ts"],
+  "include": ["src"],
   "exclude": [
-    //Generated files might cause and ts error on devops
-    "src/components/icon/GENERATED",
     "src/components/icon/svg-template.ts",
     "node_modules",
     "dist",
