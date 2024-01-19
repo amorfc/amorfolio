@@ -8,6 +8,7 @@ import AppSwiper from "../swiper/AppSwiper";
 import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";
 import ExperienceSection from "./experience/ExperienceSection";
+import AmorfolioUtils from "./amorfolio-utils/AmorfolioUtils";
 
 interface PortfolioSectionProps extends PropsWithTwClassName {}
 
@@ -35,7 +36,7 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
       </BaseView>
       <BaseView className="lg:max-h-[22%]">
         <HomeSection className="max-h-[15vh] lg:max-h-full">
-          <AppSwiper slides={jobExperienceSlides} />
+          <AmorfolioUtils />
         </HomeSection>
       </BaseView>
     </BaseView>

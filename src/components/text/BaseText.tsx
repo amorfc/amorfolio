@@ -8,7 +8,7 @@ export interface BaseTextProps extends PropsWithTwClassName {
 const BaseText = (props: BaseTextProps) => {
   const { text, className } = props;
   const baseClassName = styleMerge(
-    "antialiased hover:subpixel-antialiased overflow-hidden text-mediumgrey",
+    "antialiased hover:subpixel-antialiased overflow-hidden text-desc",
     className
   );
   return <p className={baseClassName}>{text}</p>;

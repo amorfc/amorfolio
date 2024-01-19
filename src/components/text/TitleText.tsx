@@ -23,7 +23,7 @@ const TitleText = (props: TitleTextProps) => {
   }, [size]);
 
   const baseTitleTextClassName = styleMerge(
-    "font-bold text-lightgrey",
+    "font-bold text-title",
     sizeStyle,
     className
   );

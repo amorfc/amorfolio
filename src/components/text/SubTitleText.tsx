@@ -9,7 +9,7 @@ interface SubTitleTextProps extends BaseTextProps {
 const SubTitleText = (props: SubTitleTextProps) => {
   const { className } = props;
 
-  const baseSubTitleTextClassName = styleMerge("text-hardgrey", className);
+  const baseSubTitleTextClassName = styleMerge("text-subtitle", className);
   return (
     <TitleText
       size={SizeContants.small}
