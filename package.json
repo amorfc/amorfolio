@@ -11,7 +11,9 @@
     "icons:generate": "npx @svgr/cli --typescript -d ./src/components/icon/GENERATED ./public/svg --config-file ./src/components/icon/svgr-config.json --template ./src/components/icon/svg-template.ts"
   },
   "dependencies": {
+    "@types/react-color": "^3.0.11",
     "react": "^18.2.0",
+    "react-color": "^2.19.3",
     "react-dom": "^18.2.0",
     "swiper": "^11.0.5",
     "tailwind-merge": "^2.2.0"

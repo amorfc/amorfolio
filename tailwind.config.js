@@ -14,6 +14,7 @@ export default {
       colors: {
         icon: "var(--color-lightgrey)",
         iconActive: "var(--color-mediumgrey)",
+        button: "var(--color-danger)",
       },
     },
   },
