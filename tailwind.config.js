@@ -13,7 +13,7 @@ export default {
       },
       colors: {
         icon: "var(--color-lightgrey)",
-        iconActive: "var(--color-mediumgrey)",
+        iconActive: "var(--color-hardgrey)",
         button: "var(--color-danger)",
       },
     },
