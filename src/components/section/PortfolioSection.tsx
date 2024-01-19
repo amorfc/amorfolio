@@ -26,7 +26,7 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
 
   return (
     <BaseView className={styleMerge(className)}>
-      <BaseView className="lg:max-h-[75%] gap-y-5 lg:h-full lg:pb-6">
+      <BaseView className="lg:max-h-[75%] gap-y-6 lg:h-full lg:pb-6">
         <HomeSection className={homeSectionPartClassName}>
           <AppSwiper slides={jobExperienceSlides} isAutoPlay />
         </HomeSection>
