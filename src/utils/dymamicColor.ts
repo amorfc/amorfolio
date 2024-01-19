@@ -103,18 +103,20 @@ export const calcAndSetNewColorStyles = (
     };
   }
 
+  const primaryHexColor = colorLuminance(baseHexColor, -0.2);
   const neuShadowStart = colorLuminance(baseHexColor, -0.15);
-  const neuShadowEnd = colorLuminance(baseHexColor, 0.07);
+  const neuShadowEnd = colorLuminance(baseHexColor, 0.09);
 
+  const ternary = colorLuminance(baseHexColor, -colorDiff);
   const mediumText = colorLuminance(baseHexColor, -0.35);
   const lightText = colorLuminance(baseHexColor, -0.45);
   const hardText = colorLuminance(baseHexColor, -0.5);
 
   setNewColorsToRootStyle({
     colors: {
-      color_primary: hexToRGBAStr(baseHexColor),
+      color_primary: hexToRGBAStr(primaryHexColor),
       color_secondary: hexToRGBAStr(baseHexColor),
-      color_ternary: hexToRGBAStr(mediumText),
+      color_ternary: hexToRGBAStr(ternary),
       color_danger: hexToRGBAStr("#FF4136"),
       color_hardgrey: hexToRGBAStr(hardText),
       color_mediumgrey: hexToRGBAStr(mediumText),
