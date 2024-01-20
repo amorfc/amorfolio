@@ -8,14 +8,14 @@ import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";
 
 export const ProfileSection = () => {
-  const baseCircleViewClassName = "neu-circle m-8";
+  const baseCircleViewClassName = "neu-circle m-8 my-4";
   return (
     <HomeSection className="overflow-hidden">
       <BaseView className="basis-[35%] items-center justify-center">
         <BaseCircleView className={baseCircleViewClassName}>
           <ProfileImage className="p-4 rounded-full opacity-80" />
         </BaseCircleView>
-        <BaseView className="flex-row flex-wrap gap-4 px-0 justify-center">
+        <BaseView className="flex-row flex-wrap gap-4 my-2 px-0 justify-center">
           <SocialMediaIcon socialMedia={SocialMedia.Github} />
           <SocialMediaIcon socialMedia={SocialMedia.LinkedIn} />
           <SocialMediaIcon socialMedia={SocialMedia.Telegram} />

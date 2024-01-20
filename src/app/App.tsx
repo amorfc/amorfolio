@@ -10,7 +10,7 @@ function App() {
 
   const portfolioSectionWrapperStyle = styleMerge(
     profileSectionStyle,
-    "basis-1 lg:basis-1/2 gap-y-7"
+    "lg:basis-1/2 gap-y-7"
   );
 
   const profileSection = styleMerge("gap-y-7 lg:h-full");

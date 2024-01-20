@@ -17,16 +17,11 @@ const ExperienceSectionDescriptionView = (
   const { company, jobTitle, shortDescription, startDate } = props;
   return (
     <>
-      <BaseView className="w-full basis-[15%] items-center justify-start">
-        <BaseView className="flex-row w-full items-center justify-start">
+      <BaseView className="w-full basis-[15%] items-center justify-start overflow-hidden">
+        <BaseView className="flex-col w-full items-start justify-center">
           <TitleText text={company} />
           {jobTitle && (
             <>
-              <TitleText
-                className="mx-2"
-                text={"-"}
-                size={SizeContants.small}
-              />
               <TitleText text={jobTitle} size={SizeContants.small} />
             </>
           )}

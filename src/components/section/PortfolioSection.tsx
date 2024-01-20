@@ -22,7 +22,7 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
   }, []);
 
   const homeSectionPartClassName =
-    "max-h-[28vh] lg:max-h-[50%] md:hover:scale-[1.015] transition-all duration-300";
+    "max-h-[65vh] sm:max-h-[45vh] md:max-h-[28vh] lg:max-h-[50%] md:hover:scale-[1.015] transition-all duration-300";
 
   return (
     <BaseView className={styleMerge(className)}>
