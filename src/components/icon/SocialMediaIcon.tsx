@@ -28,7 +28,7 @@ const SocialMediaComponents = {
 };
 
 const SocialMediaIcon = (props: SocialMediaIconProps) => {
-  const { socialMedia, className } = props;
+  const { socialMedia, className, ...restProps } = props;
   const SocialMediaComponent = SocialMediaComponents[socialMedia];
 
   const handleOnClick = useCallback(() => {
@@ -41,7 +41,7 @@ const SocialMediaIcon = (props: SocialMediaIconProps) => {
     className
   );
 
-  const finalProps = { className: finalClassName, ...wh, ...props };
+  const finalProps = { className: finalClassName, ...wh, ...restProps };
 
   return <SocialMediaComponent onClick={handleOnClick} {...finalProps} />;
 };
