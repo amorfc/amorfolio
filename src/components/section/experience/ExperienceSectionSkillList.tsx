@@ -13,7 +13,7 @@ const ExperienceSectionSkillList = (props: ExperienceSectionSkillListProps) => {
   const { className, data } = props;
 
   const baseClassName = styleMerge(
-    "flex-row flex-wrap items-start justify-start",
+    "flex-row flex-nowrap overflow-auto no-scrollbar h-scrollGradient",
     className
   );
   return (

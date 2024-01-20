@@ -39,6 +39,8 @@ export const experienceData: ExperienceType[] = [
       Skills.Node,
       Skills.Next,
       Skills.Node,
+      Skills.Next,
+      Skills.Node,
     ],
     imgPublicUrl: ImagePublicUrls.Profile, // Replace with the actual image public URL
     link: "https://via.placeholder.com/150", // Replace with the actual link

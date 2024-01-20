@@ -65,3 +65,31 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar-ms {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.h-scrollGradient {
+  overflow: auto;
+  background-image: linear-gradient(
+      to right,
+      var(--color-secondary),
+      var(--color-secondary)
+    ),
+    linear-gradient(to right, var(--color-secondary), var(--color-secondary)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: var(--color-secondary);
+  background-size: 30px 100%, 30px 100%, 20px 100%, 20px 100%;
+  background-attachment: local, local, scroll, scroll;
+}

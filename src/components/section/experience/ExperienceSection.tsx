@@ -2,6 +2,7 @@ import { ExperienceType } from "../../../data/experience/experienceData";
 import BaseView from "../../view/BaseView";
 import ExperienceSectionDescriptionView from "./ExperienceSectionDescriptionView";
 import ExperienceSectionLogo from "./ExperienceSectionLogo";
+import ExperienceSectionSkillList from "./ExperienceSectionSkillList";
 
 interface ExperienceSectionProps {
   data: ExperienceType;
@@ -16,21 +17,33 @@ const ExperienceSection = (props: ExperienceSectionProps) => {
       description: shortDescription,
       startDate,
       endDate,
+      skills,
     },
   } = props;
 
   return (
-    <BaseView className="flex-row w-full h-full overflow-hidden">
-      <BaseView className="basis-[25%] items-center justify-center">
-        <ExperienceSectionLogo imgPublicUrl={imgPublicUrl} company={company} />
+    <BaseView className="w-full h-full overflow-hidden justify-between">
+      <BaseView className="flex-row">
+        <BaseView className="basis-[20%] items-center justify-center">
+          <ExperienceSectionLogo
+            imgPublicUrl={imgPublicUrl}
+            company={company}
+          />
+        </BaseView>
+        <BaseView className="basis-[80%] items-start justify-start p-2">
+          <ExperienceSectionDescriptionView
+            company={company}
+            shortDescription={shortDescription}
+            startDate={startDate}
+            endDate={endDate}
+            jobTitle={jobTitle}
+          />
+        </BaseView>
       </BaseView>
-      <BaseView className="basis-[75%] items-start justify-start px-4 py-8">
-        <ExperienceSectionDescriptionView
-          company={company}
-          shortDescription={shortDescription}
-          startDate={startDate}
-          endDate={endDate}
-          jobTitle={jobTitle}
+      <BaseView className="flex-none flex-0 my-2 p-10">
+        <ExperienceSectionSkillList
+          className={"rounded-xl items-center justify-center gap-2"}
+          data={skills}
         />
       </BaseView>
     </BaseView>
