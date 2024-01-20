@@ -16,6 +16,9 @@ export default {
         iconActive: "var(--color-hardgrey)",
         button: "var(--color-danger)",
       },
+      fontSize: {
+        xsm: "0.6rem",
+      },
     },
   },
   plugins: [],

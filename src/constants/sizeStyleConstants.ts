@@ -3,6 +3,7 @@ export enum SizeContants {
   large = "large",
   small = "small",
   xsmall = "xsmall",
+  xxsmall = "xxsmall",
 }
 
 export const IconSize = {

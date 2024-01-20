@@ -5,7 +5,7 @@ import SubTitleText from "./SubTitleText";
 interface LabelTextProps extends BaseTextProps {}
 
 const LabelText = (props: LabelTextProps) => {
-  return <SubTitleText size={SizeContants.xsmall} {...props} />;
+  return <SubTitleText size={SizeContants.xxsmall} {...props} />;
 };
 
 export default LabelText;
