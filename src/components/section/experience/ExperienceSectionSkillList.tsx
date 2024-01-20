@@ -1,6 +1,6 @@
 import { Children } from "react";
 import { PropsWithTwClassName } from "../../../common/propsInterfaces";
-import { SkillType } from "../../../data/programmingLang";
+import { SkillType } from "../../../data/skillsData";
 import BaseView from "../../view/BaseView";
 import { styleMerge } from "../../../utils/styleMerge";
 import NeuLabel from "../../label/NeuLabel";

@@ -1,4 +1,5 @@
 import { ImagePublicUrls } from "../../constants/imagePublicUrlConstants";
+import { SkillType, Skills } from "../skillsData";
 
 export interface ExperienceTechStackType {
   name: string;
@@ -12,7 +13,7 @@ export interface ExperienceType {
   endDate: string;
   jobTitle?: string;
   description: string;
-  techStack: ExperienceTechStackType[];
+  skills: SkillType[];
   imgPublicUrl: ImagePublicUrls;
   link: string;
 }
@@ -28,9 +29,16 @@ export const experienceData: ExperienceType[] = [
       Spearheaded the creation of a robust API for a crypto staking service, implementing cutting-edge technologies to ensure seamless functionality. This included designing and optimizing backend processes to facilitate secure and efficient staking operations.
       Crafted an intuitive and user-friendly web interface for the crypto staking service, utilizing modern web development tools. Result: an appealing, responsive interface for seamless staking activity management.
     `,
-    techStack: [
-      { name: "React", imgPublicUrl: "https://via.placeholder.com/150" },
-      // Add other technologies if applicable
+    skills: [
+      Skills.JavaScript,
+      Skills.TypeScript,
+      Skills.React,
+      Skills.Next,
+      Skills.Node,
+      Skills.Next,
+      Skills.Node,
+      Skills.Next,
+      Skills.Node,
     ],
     imgPublicUrl: ImagePublicUrls.Profile, // Replace with the actual image public URL
     link: "https://via.placeholder.com/150", // Replace with the actual link
@@ -46,7 +54,7 @@ export const experienceData: ExperienceType[] = [
       Engineered an Electron.js application using React and Redux Toolkit Query, delivering betting games across all bet office machines.
       Maintained a React Native application with bare Redux for specialized customers, featuring game offerings and account management.
     `,
-    techStack: [
+    skills: [
       // Add technologies for this experience if applicable
     ],
     imgPublicUrl: ImagePublicUrls.BeynTechnology, // Replace with the actual image public URL
@@ -63,8 +71,12 @@ export const experienceData: ExperienceType[] = [
       Authored code fixes and enhancements for inclusion in future code releases and patches.
       Developed app via React Native - Expo SDK and published on Google Play Store.
     `,
-    techStack: [
-      // Add technologies for this experience if applicable
+    skills: [
+      Skills.JavaScript,
+      Skills.TypeScript,
+      Skills.React,
+      Skills.Next,
+      Skills.Node,
     ],
     imgPublicUrl: ImagePublicUrls.Kolaybi, // Replace with the actual image public URL
     link: "https://via.placeholder.com/150", // Replace with the actual link
@@ -80,7 +92,7 @@ export const experienceData: ExperienceType[] = [
       Maintained and added new features to an existing web application built with React.
       Supported the CRM frontend team with architectural guidance.
     `,
-    techStack: [
+    skills: [
       // Add technologies for this experience if applicable
     ],
     imgPublicUrl: ImagePublicUrls.Techbros, // Replace with the actual image public URL
@@ -98,7 +110,7 @@ export const experienceData: ExperienceType[] = [
       Designed user interfaces that engaged multiple senses and produced immersive experiences.
       Created custom mobile applications using native technologies.
     `,
-    techStack: [
+    skills: [
       // Add technologies for this experience if applicable
     ],
     imgPublicUrl: ImagePublicUrls.Appcent, // Replace with the actual image public URL

@@ -20,11 +20,11 @@ const ExperienceSection = (props: ExperienceSectionProps) => {
   } = props;
 
   return (
-    <BaseView className="flex-row w-full h-full">
+    <BaseView className="flex-row w-full h-full overflow-hidden">
       <BaseView className="basis-[25%] items-center justify-center">
         <ExperienceSectionLogo imgPublicUrl={imgPublicUrl} company={company} />
       </BaseView>
-      <BaseView className="basis-[75%] items-center justify-start px-4 py-8">
+      <BaseView className="basis-[75%] items-start justify-start px-4 py-8">
         <ExperienceSectionDescriptionView
           company={company}
           shortDescription={shortDescription}
