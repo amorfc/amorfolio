@@ -23,14 +23,7 @@ const AppSwiper = (props: AppSwiperProps) => {
     isAutoPlay = false,
   } = props;
 
-  const baseFlexStyle = useMemo(
-    () =>
-      direction == SwiperDirection.HORIZONTAL
-        ? "w-[100vh] h-full"
-        : "w-full h-[100vh]",
-    [direction]
-  );
-  const baseSwiperClassName = styleMerge(baseFlexStyle, swiperClassName);
+  const baseSwiperClassName = styleMerge("w-full h-full", swiperClassName);
 
   const autoPlayConfig = useMemo(() => {
     const randomDelay = generateRandomDelay();
