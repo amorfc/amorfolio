@@ -34,7 +34,7 @@ const ExperienceSection = (props: ExperienceSectionProps) => {
             company={company}
           />
         </BaseView>
-        <BaseView className="flex-none md:basis-[80%] p-2">
+        <BaseView className="flex-none md:basis-[80%] mt-1 md:mt-4 p-2">
           <ExperienceSectionDescriptionView
             company={company}
             shortDescription={shortDescription}
