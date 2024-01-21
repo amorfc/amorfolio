@@ -78,7 +78,6 @@ button:focus-visible {
 }
 
 .h-scrollGradient {
-  overflow: auto;
   background-image: linear-gradient(
       to right,
       var(--color-secondary),
