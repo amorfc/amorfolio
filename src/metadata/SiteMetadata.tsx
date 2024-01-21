@@ -12,9 +12,9 @@ const SiteMetadata = () => {
       <meta property="og:url" content={metadata.siteUrl} />
       <meta property="og:title" content={ogTitle} />
       <meta property="og:description" content={ogDesc} />
-      <meta property="og:image" content="/cocktail.png" />
+      {/* <meta property="og:image" content={ogImage} /> */}
       <meta property="og:type" content="website" />
-      <meta name="twitter:image" content="/cocktail.png" />
+      {/* <meta name="twitter:image" content={ogImage} /> */}
       <meta name="twitter:title" content={ogTitle} />
       <meta name="twitter:description" content={ogDesc} />
       <meta name="description" content={ogDesc} />
