@@ -2,6 +2,7 @@ import { PortfolioSection } from "../components/section/PortfolioSection";
 import { ProfileSection } from "../components/section/ProfileSection";
 import AppLayout from "../components/view/AppLayout";
 import BaseView from "../components/view/BaseView";
+import SiteMetadata from "../metadata/SiteMetadata";
 import { styleMerge } from "../utils/styleMerge";
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <AppLayout className={"gap-10 flex-col lg:flex-row"}>
+      <SiteMetadata />
       <BaseView className={profileSectionStyle}>
         <ProfileSection />
       </BaseView>
