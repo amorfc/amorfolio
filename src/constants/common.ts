@@ -5,3 +5,12 @@ export enum SocialMedia {
   Telegram = "telegram",
   Instagram = "instagram",
 }
+
+export const metadata = {
+  title: "Fatih Ermetin Portfolio",
+  openGraph: {
+    title: "Fatih Ermetin Portfolio",
+    description: "Come and see my portfolio which amorfolio :) !",
+    images: [``],
+  },
+};
