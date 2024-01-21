@@ -1,8 +1,10 @@
 import { metadata } from "../constants/common";
+import { Helmet } from "react-helmet";
 
 const SiteMetadata = () => {
   return (
-    <>
+    <Helmet>
+      <title>{metadata.title}</title>
       <meta property="og:site_name" content={metadata.title} />
       <meta property="og:site" content="bartool.apps.cronin.nz" />
       <meta property="og:url" content="https://bartool.apps.cronin.nz" />
@@ -24,7 +26,7 @@ const SiteMetadata = () => {
         content="Recipes and riffing for the amateur mixologist"
       />
       <meta name="title" content="Bar Tool" />
-    </>
+    </Helmet>
   );
 };
 
