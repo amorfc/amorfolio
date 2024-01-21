@@ -6,11 +6,11 @@ import { styleMerge } from "../utils/styleMerge";
 import "./App.css";
 
 function App() {
-  const profileSectionStyle = "basis-1/4";
+  const profileSectionStyle = "lg:max-w-[35%] lg:h-full";
 
   const portfolioSectionWrapperStyle = styleMerge(
     profileSectionStyle,
-    "lg:basis-1/2 gap-y-7"
+    "lg:max-w-[65%] gap-y-7"
   );
 
   const profileSection = styleMerge("gap-y-7 lg:h-full");

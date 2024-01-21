@@ -23,7 +23,7 @@ const AppSwiper = (props: AppSwiperProps) => {
     isAutoPlay = false,
   } = props;
 
-  const baseSwiperClassName = styleMerge("w-full h-full", swiperClassName);
+  const baseSwiperClassName = styleMerge("w-full", swiperClassName);
 
   const autoPlayConfig = useMemo(() => {
     const randomDelay = generateRandomDelay();

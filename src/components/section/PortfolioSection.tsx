@@ -18,20 +18,21 @@ interface PortfolioSectionProps extends PropsWithTwClassName {}
 
 export const PortfolioSection = (props: PortfolioSectionProps) => {
   const { className } = props;
-  const { isMobile } = useScreenDetector();
+  const { isDesktop } = useScreenDetector();
 
   const jobExperienceSlides: SwiperSlideParams[] = useMemo(() => {
     return experienceData?.map((data) => ({
       content: createElement(ExperienceSection, { data }),
+      slideClassName: "overflow-hidden",
     }));
   }, []);
 
   const homeSectionPartClassName =
-    "max-h-[65vh] sm:max-h-[45vh] md:max-h-[28vh] lg:max-h-[50%] md:hover:scale-[1.015] transition-all duration-300";
+    "lg:max-h-[50%] md:hover:scale-[1.015] transition-all duration-300";
 
   const swiperDirection = useMemo(
-    () => (isMobile ? SwiperDirection.HORIZONTAL : SwiperDirection.VERTICAL),
-    [isMobile]
+    () => (!isDesktop ? SwiperDirection.HORIZONTAL : SwiperDirection.VERTICAL),
+    [isDesktop]
   );
   return (
     <BaseView className={styleMerge(className)}>
@@ -44,11 +45,11 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
           />
         </HomeSection>
         <HomeSection className={homeSectionPartClassName}>
-          <AppSwiper slides={jobExperienceSlides} isAutoPlay />
+          <AppSwiper slides={[]} isAutoPlay />
         </HomeSection>
       </BaseView>
       <BaseView className="lg:max-h-[22%]">
-        <HomeSection className="max-h-[25vh] lg:max-h-full">
+        <HomeSection className="lg:max-h-full">
           <AmorfolioUtils />
         </HomeSection>
       </BaseView>
