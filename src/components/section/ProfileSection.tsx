@@ -1,3 +1,4 @@
+import { Children } from "react";
 import { SocialMedia } from "../../constants/common";
 import { profileSection } from "../../data/profileSection";
 import SocialMediaIcon from "../icon/SocialMediaIcon";
@@ -16,11 +17,11 @@ export const ProfileSection = () => {
           <ProfileImage className="p-4 rounded-full opacity-80" />
         </BaseCircleView>
         <BaseView className="flex-row flex-wrap gap-4 my-2 px-0 justify-center">
-          <SocialMediaIcon socialMedia={SocialMedia.Github} />
-          <SocialMediaIcon socialMedia={SocialMedia.LinkedIn} />
-          <SocialMediaIcon socialMedia={SocialMedia.Telegram} />
-          <SocialMediaIcon socialMedia={SocialMedia.Instagram} />
-          <SocialMediaIcon socialMedia={SocialMedia.X} />
+          {Children.toArray(
+            Object.values(SocialMedia).map((value) => (
+              <SocialMediaIcon socialMedia={value} />
+            ))
+          )}
         </BaseView>
       </BaseView>
       <BaseView className="neu-rectangle neu-inset rounded-3xl basis-[65%] mt-2 xl:m-5 p-4 text-center items-center justify-center">

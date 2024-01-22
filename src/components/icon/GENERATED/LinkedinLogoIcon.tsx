@@ -6,7 +6,7 @@
 // @ts-expect-error
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgLinkedinLogo = (props: SVGProps<SVGSVGElement>) => (
+const SvgLinkedinLogoIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={props.width || 256}
@@ -34,4 +34,4 @@ const SvgLinkedinLogo = (props: SVGProps<SVGSVGElement>) => (
     <path d="M1.058 0C.472 0 0 .472 0 1.058v4.234C0 5.878.472 6.35 1.058 6.35h4.234c.586 0 1.058-.472 1.058-1.058V1.058C6.35.472 5.878 0 5.292 0zm.617 1.269c.268 0 .486.2.486.448 0 .247-.218.448-.486.448-.267 0-.484-.2-.484-.448 0-.247.216-.448.484-.448m2.52 1.18c.573 0 .964.357.964 1.028V5.08h-.87V3.477c0-.18-.105-.36-.391-.36-.479 0-.48.482-.48.657v1.307h-.871V2.468h.87v.436s.214-.455.777-.455m-2.955.02h.871V5.08h-.87Z" />
   </svg>
 );
-export default SvgLinkedinLogo;
+export default SvgLinkedinLogoIcon;

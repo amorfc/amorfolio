@@ -6,7 +6,7 @@
 // @ts-expect-error
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgPaintBucket = (props: SVGProps<SVGSVGElement>) => (
+const SvgPaintBucketIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={props.width || 256}
@@ -21,4 +21,4 @@ const SvgPaintBucket = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
-export default SvgPaintBucket;
+export default SvgPaintBucketIcon;
