@@ -6,6 +6,7 @@ import { getSocialMediaRedirectUrl } from "../../utils/redirect";
 import { styleMerge } from "../../utils/styleMerge";
 import { openInNewTab } from "../../utils/window";
 import {
+  Email,
   GithubLogo,
   InstagramLogo,
   LinkedinLogo,
@@ -25,6 +26,7 @@ const SocialMediaComponents = {
   [SocialMedia.Telegram]: TelegramLogo,
   [SocialMedia.Instagram]: InstagramLogo,
   [SocialMedia.X]: XLogo,
+  [SocialMedia.Email]: Email,
 };
 
 const SocialMediaIcon = (props: SocialMediaIconProps) => {
