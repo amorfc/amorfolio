@@ -12,5 +12,7 @@ export const getSocialMediaRedirectUrl = (socialMedia: SocialMedia) => {
       return "https://twitter.com/amorfke";
     case SocialMedia.Instagram:
       return "https://www.instagram.com/amooorfati/";
+    case SocialMedia.Email:
+      return "mailto:fatihermetin@gmail.com";
   }
 };
