@@ -16,7 +16,7 @@ export const ProfileSection = () => {
         <BaseCircleView className={baseCircleViewClassName}>
           <ProfileImage className="p-4 rounded-full opacity-80" />
         </BaseCircleView>
-        <BaseView className="flex-row flex-wrap gap-4 my-2 px-0 justify-center">
+        <BaseView className="flex-row flex-wrap gap-4 my-2 px-6 justify-center">
           {Children.toArray(
             Object.values(SocialMedia).map((value) => (
               <SocialMediaIcon socialMedia={value} />
