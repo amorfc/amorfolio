@@ -1,14 +1,14 @@
 import { useMemo } from "react";
 // Add your animation here if you like to expand the animation options from tailwind animated
-type TwAppAnimationType = "fade-up" | "fade-down";
+type TwAppAnimationType = "fade-up" | "fade-down" | "fade-left" | "fade-right";
 
 interface UseTwAnimationParams {
-  anim: TwAppAnimationType;
+  anim?: TwAppAnimationType;
   durationMs?: number;
 }
 
 export const useTwAppAnimation = (params: UseTwAnimationParams): string => {
-  const { anim, durationMs = 600 } = params;
+  const { anim = "fade-up", durationMs = 600 } = params;
 
   const result = useMemo(() => {
     const durationRes = durationMs;
