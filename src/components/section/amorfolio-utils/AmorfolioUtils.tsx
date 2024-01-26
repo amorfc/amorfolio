@@ -21,28 +21,25 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   const { className } = props;
 
   const [showThemePicker, setShowThemePicker] = useState(false);
+
   const utilContainerRef = useRef<HTMLDivElement>(null);
   const scrollIntoUtilContainer =
     useScrollIntoView<HTMLDivElement>(utilContainerRef);
 
-  const utilActionsContainerAnimation = useTwAppAnimation({
-    anim: "fade-down",
-  });
-  const utilContainerAnimation = useTwAppAnimation({ anim: "fade-up" });
+  const utilActionsViewAnim = useTwAppAnimation({ anim: "fade-down" });
+  const utilViewAnim = useTwAppAnimation({ anim: "fade-up" });
 
   const utilActionsClassName = styleMerge(
     "flex-row flex-wrap gap-6 lg:gap-x-12 items-center justify-center",
-    utilActionsContainerAnimation,
+    utilActionsViewAnim,
     className
   );
-
-  const baseAmorfolioUtilButtonClassName = styleMerge(
+  const utilButtonClassName = styleMerge(
     "min-w-[120px] min-h-[120px] w-[180px] max-w-[180px] h-[100%]"
   );
-
   const utilContainerClassName = styleMerge(
     "flex flex-wrap gap-6 flex-row justify-center items-center",
-    utilContainerAnimation
+    utilViewAnim
   );
 
   const wh = { width: IconSize.medium, height: IconSize.medium };
@@ -69,15 +66,15 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
         <BaseView className={utilActionsClassName}>
           <AmorfolioUtilButton
             icon={paintBucket}
-            className={baseAmorfolioUtilButtonClassName}
+            className={utilButtonClassName}
           />
           <AmorfolioUtilButton
             icon={paintBucket}
-            className={baseAmorfolioUtilButtonClassName}
+            className={utilButtonClassName}
           />
           <AmorfolioUtilButton
             icon={paintBucket}
-            className={baseAmorfolioUtilButtonClassName}
+            className={utilButtonClassName}
             onClick={handleOnThemeButtonClick}
           />
         </BaseView>
