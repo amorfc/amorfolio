@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useState } from "react";
 import { BlockPickerProps, TwitterPicker } from "react-color";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
 import {
@@ -56,7 +56,7 @@ const BaseColorPicker = (props: BaseColorPickerProps) => {
     };
   }, [computedStyle]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const currentBackgroundColor =
       computedStyle.getPropertyValue("--color-secondary");
     setBlockPickerColor(rgbaStringToRGBAObject(currentBackgroundColor));
