@@ -9,7 +9,7 @@ interface ExperienceSectionLogoProps {
 const ExperienceSectionLogo = (props: ExperienceSectionLogoProps) => {
   const { imgPublicUrl, company } = props;
   return (
-    <NeuCircleImage imgPublicUrl={imgPublicUrl} alt={`${company}_logo_alt`} />
+    <NeuCircleImage imagePublicUrl={imgPublicUrl} alt={`${company}_logo_alt`} />
   );
 };
 
