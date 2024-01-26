@@ -1,7 +1,5 @@
 import { ImagePublicUrls } from "../../../constants/imagePublicUrlConstants";
-import { SizeContants } from "../../../constants/sizeStyleConstants";
-import AppImage from "../../image/AppImage";
-import BaseCircleView from "../../view/BaseCircleView";
+import NeuCircleImage from "../../image/NeuCircleImage";
 
 interface ExperienceSectionLogoProps {
   imgPublicUrl: ImagePublicUrls;
@@ -11,13 +9,11 @@ interface ExperienceSectionLogoProps {
 const ExperienceSectionLogo = (props: ExperienceSectionLogoProps) => {
   const { imgPublicUrl, company } = props;
   return (
-    <BaseCircleView className="neu-circle neu-inset" size={SizeContants.medium}>
-      <AppImage
-        className="p-4 rounded-full object-cover w-[100%] h-[100%] opacity-70"
-        imagePublicUrl={imgPublicUrl}
-        alt={`${company}_logo_alt`}
-      />
-    </BaseCircleView>
+    <NeuCircleImage
+      className="p-4 rounded-full object-cover w-[100%] h-[100%] opacity-70"
+      imgPublicUrl={imgPublicUrl}
+      alt={`${company}_logo_alt`}
+    />
   );
 };
 
