@@ -13,8 +13,8 @@
   --color-hardgrey: rgba(101, 101, 101, 1);
   --color-mediumgrey: rgba(129, 129, 129, 1);
   --color-lightgrey: rgba(130, 130, 130, 1);
-  --color-neu-shadow-start: rgba(55, 55, 55, 0.5);
-  --color-neu-shadow-end: rgba(71, 71, 71, 0.5);
+  --color-neu-shadow-start: rgba(55, 55, 55, 1);
+  --color-neu-shadow-end: rgba(71, 71, 71, 1);
   --color-neu-circle: linear-gradient(
     145deg,
     var(--color-neu-shadow-start),
