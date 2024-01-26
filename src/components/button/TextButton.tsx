@@ -4,7 +4,7 @@ import { styleMerge } from "../../utils/styleMerge";
 import TitleText from "../text/TitleText";
 import BaseButton, { BaseButtonProps } from "./BaseButton";
 
-interface TextButtonProps extends PropsWithTwClassName, BaseButtonProps {
+export interface TextButtonProps extends PropsWithTwClassName, BaseButtonProps {
   buttonText: string;
   textClassName?: string;
   textSize?: SizeContants;
