@@ -17,13 +17,8 @@ const AmorfolioUtilButton = (props: AmorfolioUtilButtonProps) => {
     className
   );
 
-  const onClick = () => console.log("button cliecker");
   return (
-    <BaseButton
-      onClick={onClick}
-      {...restProps}
-      className={amorfolioUtilButtonClassName}
-    >
+    <BaseButton {...restProps} className={amorfolioUtilButtonClassName}>
       {icon}
     </BaseButton>
   );
