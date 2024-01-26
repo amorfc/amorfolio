@@ -114,6 +114,11 @@ export const calcAndSetNewColorStyles = (
   const lightText = colorLuminance(baseHexColor, 0.95);
   const hardText = colorLuminance(baseHexColor, 0.55);
 
+  console.log({
+    start: hexToRGBAStr(neuShadowStart),
+    end: hexToRGBAStr(neuShadowEnd),
+  });
+
   setNewColorsToRootStyle({
     colors: {
       color_primary: hexToRGBAStr(primaryHexColor),

@@ -9,13 +9,13 @@ import { PropsWithTwClassName } from "../../../common/propsInterfaces";
 import { IconSize } from "../../../constants/sizeStyleConstants";
 import useScrollIntoView from "../../../hooks/scroll/useAppScrollIntoView";
 import { useTwAppAnimation } from "../../../hooks/style/useTwAnimation";
+import { useScreenDetector } from "../../../hooks/useScreenDetector";
 import { styleMerge } from "../../../utils/styleMerge";
 import AmorfolioUtilButton from "../../button/AmorfolioUtilButton";
 import NeuTextButton from "../../button/NeuTextButton";
 import AppColorPicker from "../../color-picker/AppColorPicker";
 import { PaintBucketIcon } from "../../icon/GENERATED";
 import BaseView from "../../view/BaseView";
-import { useScreenDetector } from "../../../hooks/useScreenDetector";
 
 interface AmorfolioUtilsProps extends PropsWithTwClassName {}
 
@@ -67,10 +67,6 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
     <BaseView ref={utilContainerRef} className="justify-center p-3">
       {!showThemePicker && (
         <BaseView className={utilActionsClassName}>
-          <AmorfolioUtilButton
-            icon={paintBucket}
-            className={utilButtonClassName}
-          />
           <AmorfolioUtilButton
             icon={paintBucket}
             className={utilButtonClassName}
