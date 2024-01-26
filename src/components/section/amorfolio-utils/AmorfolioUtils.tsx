@@ -6,11 +6,12 @@ import {
   useState,
 } from "react";
 import { PropsWithTwClassName } from "../../../common/propsInterfaces";
-import { IconSize } from "../../../constants/sizeStyleConstants";
+import { IconSize, SizeContants } from "../../../constants/sizeStyleConstants";
 import useScrollIntoView from "../../../hooks/scroll/useAppScrollIntoView";
 import { useTwAppAnimation } from "../../../hooks/style/useTwAnimation";
 import { styleMerge } from "../../../utils/styleMerge";
 import AmorfolioUtilButton from "../../button/AmorfolioUtilButton";
+import TextButton from "../../button/TextButton";
 import AppColorPicker from "../../color-picker/AppColorPicker";
 import { PaintBucketIcon } from "../../icon/GENERATED";
 import BaseView from "../../view/BaseView";
@@ -26,8 +27,8 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   const scrollIntoUtilContainer =
     useScrollIntoView<HTMLDivElement>(utilContainerRef);
 
-  const utilActionsViewAnim = useTwAppAnimation({ anim: "fade-down" });
-  const utilViewAnim = useTwAppAnimation({ anim: "fade-up" });
+  const utilActionsViewAnim = useTwAppAnimation({});
+  const utilViewAnim = useTwAppAnimation({});
 
   const utilActionsClassName = styleMerge(
     "flex-row flex-wrap gap-6 lg:gap-x-12 items-center justify-center",
@@ -38,7 +39,7 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
     "min-w-[120px] min-h-[120px] w-[180px] max-w-[180px] h-[100%]"
   );
   const utilContainerClassName = styleMerge(
-    "flex flex-wrap gap-6 flex-row justify-center items-center",
+    "flex flex-wrap gap-6 justify-center items-center",
     utilViewAnim
   );
 
@@ -81,7 +82,14 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
       )}
       {showThemePicker && (
         <BaseView className={utilContainerClassName}>
-          <button onClick={closeThemePicker}>Back To Actions</button>
+          <div>
+            <TextButton
+              className="neu-button neu-rectangle neu-inset rounded-3xl py-1 px-4"
+              onClick={closeThemePicker}
+              buttonText="Back To Actions"
+              textSize={SizeContants.xsmall}
+            />
+          </div>
           <AppColorPicker />
         </BaseView>
       )}
