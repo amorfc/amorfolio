@@ -3,8 +3,8 @@ import { SizeContants } from "../../constants/sizeStyleConstants";
 import { styleMerge } from "../../utils/styleMerge";
 import BaseText, { BaseTextProps } from "./BaseText";
 
-interface TitleTextProps extends BaseTextProps {
-  size?: string;
+export interface TitleTextProps extends BaseTextProps {
+  size?: SizeContants;
 }
 const TitleText = (props: TitleTextProps) => {
   const { text, className, size = SizeContants.medium } = props;

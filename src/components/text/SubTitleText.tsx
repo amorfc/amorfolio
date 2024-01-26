@@ -1,11 +1,8 @@
 import { SizeContants } from "../../constants/sizeStyleConstants";
 import { styleMerge } from "../../utils/styleMerge";
-import { BaseTextProps } from "./BaseText";
-import TitleText from "./TitleText";
+import TitleText, { TitleTextProps } from "./TitleText";
 
-interface SubTitleTextProps extends BaseTextProps {
-  size?: string;
-}
+interface SubTitleTextProps extends TitleTextProps {}
 const SubTitleText = (props: SubTitleTextProps) => {
   const { className } = props;
 
