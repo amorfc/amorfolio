@@ -15,6 +15,7 @@ import NeuTextButton from "../../button/NeuTextButton";
 import AppColorPicker from "../../color-picker/AppColorPicker";
 import { PaintBucketIcon } from "../../icon/GENERATED";
 import BaseView from "../../view/BaseView";
+import { useScreenDetector } from "../../../hooks/useScreenDetector";
 
 interface AmorfolioUtilsProps extends PropsWithTwClassName {}
 
@@ -22,6 +23,7 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   const { className } = props;
 
   const [showThemePicker, setShowThemePicker] = useState(false);
+  const { isMobile } = useScreenDetector();
 
   const utilContainerRef = useRef<HTMLDivElement>(null);
   const scrollIntoUtilContainer =
@@ -56,19 +58,15 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   );
 
   useLayoutEffect(() => {
-    if (!showThemePicker) {
+    if (isMobile) {
       scrollIntoUtilContainer();
     }
-  }, [showThemePicker, scrollIntoUtilContainer]);
+  }, [showThemePicker, scrollIntoUtilContainer, isMobile]);
 
   return (
     <BaseView ref={utilContainerRef} className="justify-center p-3">
       {!showThemePicker && (
         <BaseView className={utilActionsClassName}>
-          <AmorfolioUtilButton
-            icon={paintBucket}
-            className={utilButtonClassName}
-          />
           <AmorfolioUtilButton
             icon={paintBucket}
             className={utilButtonClassName}
