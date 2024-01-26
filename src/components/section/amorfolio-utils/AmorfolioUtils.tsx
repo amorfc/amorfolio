@@ -1,6 +1,13 @@
-import { createElement, useCallback, useState } from "react";
+import {
+  createElement,
+  useCallback,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { PropsWithTwClassName } from "../../../common/propsInterfaces";
 import { IconSize } from "../../../constants/sizeStyleConstants";
+import useScrollIntoView from "../../../hooks/scroll/useAppScrollIntoView";
 import { useTwAppAnimation } from "../../../hooks/style/useTwAnimation";
 import { styleMerge } from "../../../utils/styleMerge";
 import AmorfolioUtilButton from "../../button/AmorfolioUtilButton";
@@ -12,7 +19,11 @@ interface AmorfolioUtilsProps extends PropsWithTwClassName {}
 
 const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   const { className } = props;
+
   const [showThemePicker, setShowThemePicker] = useState(false);
+  const utilContainerRef = useRef<HTMLDivElement>(null);
+  const scrollIntoUtilContainer =
+    useScrollIntoView<HTMLDivElement>(utilContainerRef);
 
   const utilActionsContainerAnimation = useTwAppAnimation({
     anim: "fade-down",
@@ -46,8 +57,14 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
     [setShowThemePicker]
   );
 
+  useLayoutEffect(() => {
+    if (!showThemePicker) {
+      scrollIntoUtilContainer();
+    }
+  }, [showThemePicker, scrollIntoUtilContainer]);
+
   return (
-    <BaseView className="justify-center p-3">
+    <BaseView ref={utilContainerRef} className="justify-center p-3">
       {!showThemePicker && (
         <BaseView className={utilActionsClassName}>
           <AmorfolioUtilButton
