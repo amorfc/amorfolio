@@ -41,7 +41,7 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
     "min-w-[120px] min-h-[120px] w-[180px] max-w-[180px] h-[100%]"
   );
   const utilContainerClassName = styleMerge(
-    "flex flex-wrap gap-6 justify-center items-center",
+    "flex flex-wrap gap-4 justify-center items-center",
     utilViewAnim
   );
 
@@ -80,11 +80,12 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
       )}
       {showThemePicker && (
         <BaseView className={utilContainerClassName}>
+          <AppColorPicker />
           <NeuTextButton
+            className="flex-none flex-0"
             onClick={closeThemePicker}
             buttonText="Back To Actions"
           />
-          <AppColorPicker />
         </BaseView>
       )}
     </BaseView>
