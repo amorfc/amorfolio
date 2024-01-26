@@ -10,6 +10,7 @@ import {
   GithubLogoIcon,
   InstagramLogoIcon,
   LinkedinLogoIcon,
+  SpotifyLogoIcon,
   TelegramLogoIcon,
   XLogoIcon,
 } from "./GENERATED";
@@ -27,6 +28,7 @@ const SocialMediaComponents = {
   [SocialMedia.Instagram]: InstagramLogoIcon,
   [SocialMedia.X]: XLogoIcon,
   [SocialMedia.Email]: EmailIcon,
+  [SocialMedia.Spotify]: SpotifyLogoIcon,
 };
 
 const SocialMediaIcon = (props: SocialMediaIconProps) => {

@@ -14,5 +14,7 @@ export const getSocialMediaRedirectUrl = (socialMedia: SocialMedia) => {
       return "https://www.instagram.com/amooorfati/";
     case SocialMedia.Email:
       return "mailto:fatihermetin@gmail.com";
+    case SocialMedia.Spotify:
+      return "https://open.spotify.com/artist/40AGqEKai8eeqi6hynopXy?si=91PdvRfaSPmrQ-vAsRumVA";
   }
 };

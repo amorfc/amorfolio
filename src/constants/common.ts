@@ -5,6 +5,7 @@ export enum SocialMedia {
   Telegram = "telegram",
   Instagram = "instagram",
   Email = "email",
+  Spotify = "spotify",
 }
 
 export const metadata = {
