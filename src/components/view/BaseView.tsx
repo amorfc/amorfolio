@@ -1,14 +1,28 @@
-import { PropsWithChildren } from "react";
-import { PropsWithTwClassName } from "../../common/propsInterfaces";
+import { ForwardedRef, PropsWithChildren, forwardRef } from "react";
+import {
+  HtmlDivProps,
+  PropsWithTwClassName,
+} from "../../common/propsInterfaces";
 import { styleMerge } from "../../utils/styleMerge";
 
-interface BaseViewProps extends PropsWithChildren, PropsWithTwClassName {}
+interface BaseViewProps
+  extends PropsWithChildren,
+    PropsWithTwClassName,
+    HtmlDivProps {}
 
-const BaseView = (props: BaseViewProps) => {
-  const { children, className } = props;
+export type Ref = HTMLDivElement;
+
+const BaseViewInner = (props: BaseViewProps, ref: ForwardedRef<Ref>) => {
+  const { children, className, ...rest } = props;
   const style = styleMerge("flex flex-1 flex-col", className);
 
-  return <div className={style}>{children}</div>;
+  return (
+    <div {...rest} ref={ref} className={style}>
+      {children}
+    </div>
+  );
 };
+
+const BaseView = forwardRef<Ref, BaseViewProps>(BaseViewInner);
 
 export default BaseView;
