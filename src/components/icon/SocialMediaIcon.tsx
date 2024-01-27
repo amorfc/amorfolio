@@ -12,6 +12,7 @@ import {
   LinkedinLogoIcon,
   SpotifyLogoIcon,
   TelegramLogoIcon,
+  WebsiteIcon,
   XLogoIcon,
 } from "./GENERATED";
 
@@ -19,6 +20,7 @@ interface SocialMediaIconProps
   extends PropsWithTwClassName,
     SVGProps<SVGSVGElement> {
   socialMedia: SocialMedia;
+  redirectUrl?: string;
 }
 
 const SocialMediaComponents = {
@@ -29,15 +31,16 @@ const SocialMediaComponents = {
   [SocialMedia.X]: XLogoIcon,
   [SocialMedia.Email]: EmailIcon,
   [SocialMedia.Spotify]: SpotifyLogoIcon,
+  [SocialMedia.Website]: WebsiteIcon,
 };
 
 const SocialMediaIcon = (props: SocialMediaIconProps) => {
-  const { socialMedia, className, ...restProps } = props;
+  const { socialMedia, className, redirectUrl, ...restProps } = props;
   const SocialMediaComponent = SocialMediaComponents[socialMedia];
 
   const handleOnClick = useCallback(() => {
-    openInNewTab(getSocialMediaRedirectUrl(socialMedia));
-  }, [socialMedia]);
+    openInNewTab(getSocialMediaRedirectUrl(socialMedia, redirectUrl) ?? "");
+  }, [socialMedia, redirectUrl]);
 
   const wh = { width: IconSize.medium, height: IconSize.medium };
   const finalClassName = styleMerge(

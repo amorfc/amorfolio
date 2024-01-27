@@ -9,8 +9,6 @@ import type { SVGProps } from "react";
 const SvgSpotifyLogoIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fillRule="evenodd"
-    clipRule="evenodd"
     imageRendering="optimizeQuality"
     shapeRendering="geometricPrecision"
     textRendering="geometricPrecision"

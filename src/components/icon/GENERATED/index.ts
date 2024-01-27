@@ -5,4 +5,5 @@ export { default as LinkedinLogoIcon } from "./LinkedinLogoIcon";
 export { default as PaintBucketIcon } from "./PaintBucketIcon";
 export { default as SpotifyLogoIcon } from "./SpotifyLogoIcon";
 export { default as TelegramLogoIcon } from "./TelegramLogoIcon";
+export { default as WebsiteIcon } from "./WebsiteIcon";
 export { default as XLogoIcon } from "./XLogoIcon";

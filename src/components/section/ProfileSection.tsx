@@ -10,6 +10,8 @@ import { HomeSection } from "./HomeSection";
 
 export const ProfileSection = () => {
   const baseCircleViewClassName = "neu-circle m-8 my-4";
+
+  const ignoredSocialMedias = [SocialMedia.Website];
   return (
     <HomeSection className="overflow-hidden">
       <BaseView className="basis-[35%] items-center justify-center">
@@ -18,9 +20,9 @@ export const ProfileSection = () => {
         </BaseCircleView>
         <BaseView className="flex-row flex-wrap gap-4 my-2 px-6 justify-center">
           {Children.toArray(
-            Object.values(SocialMedia).map((value) => (
-              <SocialMediaIcon socialMedia={value} />
-            ))
+            Object.values(SocialMedia)
+              .filter((el) => !ignoredSocialMedias.includes(el))
+              .map((value) => <SocialMediaIcon socialMedia={value} />)
           )}
         </BaseView>
       </BaseView>
