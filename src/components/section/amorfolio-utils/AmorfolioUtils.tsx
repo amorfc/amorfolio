@@ -61,10 +61,11 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
     if (isMobile) {
       scrollIntoUtilContainer();
     }
-  }, [showThemePicker, scrollIntoUtilContainer, isMobile]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showThemePicker, scrollIntoUtilContainer]);
 
   return (
-    <BaseView ref={utilContainerRef} className="justify-center p-3">
+    <BaseView ref={utilContainerRef} className="justify-center p-2">
       {!showThemePicker && (
         <BaseView className={utilActionsClassName}>
           <AmorfolioUtilButton
