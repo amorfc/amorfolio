@@ -33,6 +33,7 @@
     -9px -9px 16px var(--color-neu-shadow-end);
   --neu-inset-shadow: inset 9px 9px 16px var(--color-neu-shadow-start),
     inset -9px -9px 16px var(--color-neu-shadow-end);
+  --intro-text-opacity: 0.1;
 }
 
 html,
@@ -101,4 +102,11 @@ body {
   background-color: var(--color-secondary);
   background-size: 30px 100%, 30px 100%, 20px 100%, 20px 100%;
   background-attachment: local, local, scroll, scroll;
+}
+
+.showon-scroll-text-container {
+}
+
+.showon-scroll-text-container p {
+  opacity: var(--intro-text-opacity);
 }
