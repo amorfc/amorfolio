@@ -29,26 +29,7 @@ export const experienceData: ExperienceType[] = [
       Spearheaded the creation of a robust API for a crypto staking service, implementing cutting-edge technologies to ensure seamless functionality. This included designing and optimizing backend processes to facilitate secure and efficient staking operations.
       Crafted an intuitive and user-friendly web interface for the crypto staking service, utilizing modern web development tools. Result: an appealing, responsive interface for seamless staking activity management.
     `,
-    skills: [
-      Skills.JavaScript,
-      Skills.TypeScript,
-      Skills.React,
-      Skills.Next,
-      Skills.Node,
-      Skills.Next,
-      Skills.Node,
-      Skills.Next,
-      Skills.Node,
-      Skills.Next,
-      Skills.Node,
-      Skills.Next,
-      Skills.Node,
-      Skills.Next,
-      Skills.Node,
-      Skills.Next,
-      Skills.Node,
-      Skills.TypeScript,
-    ],
+    skills: [],
     imgPublicUrl: ImagePublicUrls.Profile, // Replace with the actual image public URL
     link: "https://via.placeholder.com/150", // Replace with the actual link
   },
