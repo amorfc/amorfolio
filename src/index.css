@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .py-safe {
+    padding-top: 3rem;
+    padding-bottom: 2.2rem;
+  }
+}
+
 :root {
   margin: 0;
   /* Dark Mode */
