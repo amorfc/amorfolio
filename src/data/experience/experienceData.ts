@@ -57,9 +57,9 @@ export const experienceData: ExperienceType[] = [
     endDate: "2022 Sep",
     jobTitle: "Full Stack Developer",
     description: `
-      Maintained existing applications and designed and delivered new applications.
-      Authored code fixes and enhancements for inclusion in future code releases and patches.
-      Developed app via React Native - Expo SDK and published on Google Play Store.
+    Developed a complex React Native mobile application from scratch, providing pre-accounting services for mid-cap companies. The app handles invoicing, tracking, and management of orders and invoice-related domains from connected e-commerce platforms.
+    Maintained and added new features to an existing web application built with React.
+    Supported the CRM frontend team with architectural guidance.
     `,
     skills: [
       Skills.JavaScript,
@@ -76,11 +76,11 @@ export const experienceData: ExperienceType[] = [
     location: "Istanbul",
     startDate: "2020 Sep",
     endDate: "2020 Oct",
-    jobTitle: "Mobile Application Developer Intern",
+    jobTitle: "Mobile Developer Intern",
     description: `
-      Developed a complex React Native mobile application from scratch, providing pre-accounting services for mid-cap companies. The app handles invoicing, tracking, and management of orders and invoice-related domains from connected e-commerce platforms.
-      Maintained and added new features to an existing web application built with React.
-      Supported the CRM frontend team with architectural guidance.
+    Maintained existing applications and designed and delivered new applications.
+    Authored code fixes and enhancements for inclusion in future code releases and patches.
+    Developed app via React Native - Expo SDK and published on Google Play Store.
     `,
     skills: [
       // Add technologies for this experience if applicable
@@ -93,7 +93,7 @@ export const experienceData: ExperienceType[] = [
     location: "Istanbul",
     startDate: "2020 Jul",
     endDate: "2020 Sep",
-    jobTitle: "Mobile Application Developer Intern (Android)",
+    jobTitle: "Mobile Developer Intern (Android)",
     description: `
       Applied various techniques to locate bugs and errors in applications.
       Managed all aspects of Android app lifecycle from research and planning through deployment and post-launch support.

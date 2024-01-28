@@ -6,6 +6,7 @@ import { ProjectType } from "../../../data/project/projectData";
 import { styleMerge } from "../../../utils/styleMerge";
 import SocialMediaIcon from "../../icon/SocialMediaIcon";
 import DescriptionText from "../../text/DescriptionText";
+import TitleText from "../../text/TitleText";
 import BaseView from "../../view/BaseView";
 import ProjectSectionLogo from "./ProjectSectionLogo";
 
@@ -54,7 +55,8 @@ const ProjectSection = (props: ProjectSectionProps) => {
             </BaseView>
           )}
         </BaseView>
-        <BaseView className="lg:basis-[80%] mt-1 md:mt-4 p-2">
+        <BaseView className="lg:basis-[80%] mt-1 md:mt-12 p-2 md:px-6 gap-y-6 ">
+          <TitleText text={projectName} />
           <DescriptionText text={description} />
         </BaseView>
       </BaseView>

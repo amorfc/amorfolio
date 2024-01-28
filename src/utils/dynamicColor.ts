@@ -84,7 +84,6 @@ interface NewRootStyle {
 }
 export const setNewColorsToRootStyle = (params: { colors: NewRootStyle }) => {
   const { colors } = params;
-  console.log("colors", colors);
 
   for (const color of Object.keys(colors) as Array<keyof NewRootStyle>) {
     const name = `--${color.replace(/_/g, "-")}`;
@@ -113,11 +112,6 @@ export const calcAndSetNewColorStyles = (
   const mediumText = colorLuminance(baseHexColor, 0.85);
   const lightText = colorLuminance(baseHexColor, 0.95);
   const hardText = colorLuminance(baseHexColor, 0.55);
-
-  console.log({
-    start: hexToRGBAStr(neuShadowStart),
-    end: hexToRGBAStr(neuShadowEnd),
-  });
 
   setNewColorsToRootStyle({
     colors: {
