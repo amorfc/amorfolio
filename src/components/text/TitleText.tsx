@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { SizeContants } from "../../constants/sizeStyleConstants";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import BaseText, { BaseTextProps } from "./BaseText";
 
 export interface TitleTextProps extends BaseTextProps {

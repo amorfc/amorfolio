@@ -2,7 +2,7 @@ import { Children } from "react";
 import { PropsWithTwClassName } from "../../../common/propsInterfaces";
 import { SkillType } from "../../../data/skillsData";
 import BaseView from "../../view/BaseView";
-import { styleMerge } from "../../../utils/styleMerge";
+import { styleMerge } from "../../../utils/style/styleMerge";
 import NeuLabel from "../../label/NeuLabel";
 
 interface ExperienceSectionSkillListProps extends PropsWithTwClassName {

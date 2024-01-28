@@ -4,7 +4,7 @@ import {
   SwiperDirection,
   SwiperSlideParams,
 } from "../../constants/swiperConstants";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import { Autoplay } from "swiper/modules";
 import { generateRandomDelay } from "../../utils/randomize";
 

@@ -8,7 +8,7 @@ import {
   isValidHexColor,
   rgbaStringToRGBAObject,
 } from "../../utils/dynamicColor";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 
 interface BaseColorPickerProps extends PropsWithTwClassName, BlockPickerProps {}
 

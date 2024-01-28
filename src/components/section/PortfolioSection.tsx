@@ -6,7 +6,7 @@ import {
   SwiperSlideParams,
 } from "../../constants/swiperConstants";
 import { experienceData } from "../../data/experience/experienceData";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import AppSwiper from "../swiper/AppSwiper";
 import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";

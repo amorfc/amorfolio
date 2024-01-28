@@ -3,7 +3,7 @@ import {
   HtmlDivProps,
   PropsWithTwClassName,
 } from "../../common/propsInterfaces";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 
 interface BaseViewProps
   extends PropsWithChildren,

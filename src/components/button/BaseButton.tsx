@@ -3,7 +3,7 @@ import {
   HtmlButtonProps,
   PropsWithTwClassName,
 } from "../../common/propsInterfaces";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 
 export interface BaseButtonProps
   extends PropsWithChildren,

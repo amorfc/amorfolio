@@ -1,5 +1,5 @@
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import BaseColorPicker from "./BaseColorPicker";
 
 interface AppColorPickerProps extends PropsWithTwClassName {

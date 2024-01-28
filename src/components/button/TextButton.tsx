@@ -1,6 +1,6 @@
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
 import { SizeContants } from "../../constants/sizeStyleConstants";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import TitleText from "../text/TitleText";
 import BaseButton, { BaseButtonProps } from "./BaseButton";
 

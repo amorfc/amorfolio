@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import BaseView from "../view/BaseView";
 
 interface BaseSectionProps extends PropsWithChildren, PropsWithTwClassName {}

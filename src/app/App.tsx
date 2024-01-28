@@ -3,7 +3,7 @@ import { ProfileSection } from "../components/section/ProfileSection";
 import AppLayout from "../components/view/AppLayout";
 import BaseView from "../components/view/BaseView";
 import SiteMetadata from "../metadata/SiteMetadata";
-import { styleMerge } from "../utils/styleMerge";
+import { styleMerge } from "../utils/style/styleMerge";
 import "./App.css";
 
 function App() {

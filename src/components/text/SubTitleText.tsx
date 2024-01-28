@@ -1,5 +1,5 @@
 import { SizeContants } from "../../constants/sizeStyleConstants";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import TitleText, { TitleTextProps } from "./TitleText";
 
 interface SubTitleTextProps extends TitleTextProps {}

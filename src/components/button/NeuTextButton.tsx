@@ -1,6 +1,6 @@
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
 import { SizeContants } from "../../constants/sizeStyleConstants";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import TextButton, { TextButtonProps } from "./TextButton";
 
 interface NeuTextButtonProps extends PropsWithTwClassName, TextButtonProps {}

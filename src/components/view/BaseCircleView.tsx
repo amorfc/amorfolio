@@ -1,6 +1,6 @@
 import { PropsWithChildren, useMemo } from "react";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import { SizeContants } from "../../constants/sizeStyleConstants";
 
 interface BaseCircleViewProps extends PropsWithTwClassName, PropsWithChildren {

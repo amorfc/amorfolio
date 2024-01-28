@@ -1,5 +1,5 @@
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import LabelText from "../text/LabelText";
 
 interface NeuLabelProps extends PropsWithTwClassName {

@@ -1,4 +1,4 @@
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import BaseText, { BaseTextProps } from "./BaseText";
 
 interface DescriptionTextProps extends BaseTextProps {}

@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* To escape mobile bottom and top bars*/
   .py-safe {
     padding-top: 3rem;
     padding-bottom: 2.2rem;

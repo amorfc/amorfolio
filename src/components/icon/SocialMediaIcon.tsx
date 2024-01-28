@@ -3,7 +3,7 @@ import { PropsWithTwClassName } from "../../common/propsInterfaces";
 import { SocialMedia } from "../../constants/common";
 import { IconSize } from "../../constants/sizeStyleConstants";
 import { getSocialMediaRedirectUrl } from "../../utils/redirect";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import { openInNewTab } from "../../utils/window";
 import {
   EmailIcon,

@@ -1,4 +1,4 @@
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import BaseButton, { BaseButtonProps } from "./BaseButton";
 
 interface AmorfolioUtilButtonProps extends BaseButtonProps {

@@ -1,5 +1,5 @@
 import { ImagePublicUrls } from "../../constants/imagePublicUrlConstants";
-import { styleMerge } from "../../utils/styleMerge";
+import { styleMerge } from "../../utils/style/styleMerge";
 import AppImage, { AppImageProps } from "./AppImage";
 
 interface ProfileImageProps

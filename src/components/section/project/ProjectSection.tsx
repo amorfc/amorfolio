@@ -3,7 +3,7 @@ import { PropsWithTwClassName } from "../../../common/propsInterfaces";
 import { SocialMedia } from "../../../constants/common";
 import { IconSize } from "../../../constants/sizeStyleConstants";
 import { ProjectType } from "../../../data/project/projectData";
-import { styleMerge } from "../../../utils/styleMerge";
+import { styleMerge } from "../../../utils/style/styleMerge";
 import SocialMediaIcon from "../../icon/SocialMediaIcon";
 import DescriptionText from "../../text/DescriptionText";
 import TitleText from "../../text/TitleText";

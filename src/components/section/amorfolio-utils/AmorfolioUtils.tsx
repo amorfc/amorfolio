@@ -10,7 +10,7 @@ import { IconSize } from "../../../constants/sizeStyleConstants";
 import useScrollIntoView from "../../../hooks/scroll/useAppScrollIntoView";
 import { useTwAppAnimation } from "../../../hooks/style/useTwAnimation";
 import { useScreenDetector } from "../../../hooks/useScreenDetector";
-import { styleMerge } from "../../../utils/styleMerge";
+import { styleMerge } from "../../../utils/style/styleMerge";
 import AmorfolioUtilButton from "../../button/AmorfolioUtilButton";
 import NeuTextButton from "../../button/NeuTextButton";
 import AppColorPicker from "../../color-picker/AppColorPicker";
