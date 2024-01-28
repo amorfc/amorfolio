@@ -4,6 +4,10 @@ export const getSocialMediaRedirectUrl = (
   socialMedia: SocialMedia,
   redirectUrl?: string
 ) => {
+  if (redirectUrl) {
+    return redirectUrl;
+  }
+
   switch (socialMedia) {
     case SocialMedia.LinkedIn:
       return "https://www.linkedin.com/in/fatih-ermetin-361567190/";

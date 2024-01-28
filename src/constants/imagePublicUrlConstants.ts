@@ -4,4 +4,6 @@ export enum ImagePublicUrls {
   Kolaybi = "kolaybi_logo.jpeg",
   BeynTechnology = "beyn_technology_logo.jpeg",
   Techbros = "techbros_logo.jpeg",
+  Nym = "nym_logo.png",
+  Hoodrun = "hoodrun_logo.png",
 }
