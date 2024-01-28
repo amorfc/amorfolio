@@ -9,7 +9,7 @@ const AppLayout = (props: AppLayoutProps) => {
   const { className } = props;
   const { isMobile, isTablet } = useScreenDetector();
   const baseClassName = styleMerge(
-    "flex flex-1 bg-main lg:min-h-[100svh] p-5",
+    "flex flex-1 bg-main lg:h-[100svh] p-5",
     isMobile || isTablet ? "py-safe" : "",
     className
   );
