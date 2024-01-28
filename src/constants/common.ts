@@ -11,7 +11,7 @@ export enum SocialMedia {
 
 export const metadata = {
   title: "Fatih Ermetin Portfolio",
-  site: "amorfolio.vercel.app/",
+  site: "Fatih Ermetin Portfolio",
   siteUrl: "https://amorfolio.vercel.app/",
   openGraph: {
     title: "Fatih Ermetin Portfolio",
