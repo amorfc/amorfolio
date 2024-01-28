@@ -108,5 +108,18 @@ body {
 }
 
 .showon-scroll-text-container p {
+  transition: opacity 0.09s ease-out;
   opacity: var(--intro-text-opacity);
+}
+
+@media (max-width: 768px) {
+  .showon-scroll-text-container p {
+    font-size: 2.5cqh;
+  }
+}
+@media (min-width: 768px) {
+  .showon-scroll-text-container p {
+    font-size: 3.8cqmax;
+    line-height: 4.2cqw;
+  }
 }
