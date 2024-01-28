@@ -23,7 +23,7 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   const { className } = props;
 
   const [showThemePicker, setShowThemePicker] = useState(false);
-  const { isMobile } = useScreenDetector();
+  const { isMobile, isTablet } = useScreenDetector();
 
   const utilContainerRef = useRef<HTMLDivElement>(null);
   const scrollIntoUtilContainer =
@@ -58,7 +58,7 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   );
 
   useLayoutEffect(() => {
-    if (isMobile) {
+    if (isMobile || isTablet) {
       scrollIntoUtilContainer();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
