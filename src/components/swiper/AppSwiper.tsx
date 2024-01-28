@@ -1,5 +1,5 @@
 import { Children, useMemo } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import {
   SwiperDirection,
   SwiperSlideParams,
@@ -8,7 +8,7 @@ import { styleMerge } from "../../utils/styleMerge";
 import { Autoplay } from "swiper/modules";
 import { generateRandomDelay } from "../../utils/randomize";
 
-interface AppSwiperProps {
+interface AppSwiperProps extends SwiperProps {
   slides: SwiperSlideParams[];
   swiperClassName?: string;
   direction?: SwiperDirection;
@@ -21,6 +21,7 @@ const AppSwiper = (props: AppSwiperProps) => {
     swiperClassName,
     direction = SwiperDirection.VERTICAL,
     isAutoPlay = false,
+    ...restProps
   } = props;
 
   const baseSwiperClassName = styleMerge("w-full", swiperClassName);
@@ -39,11 +40,13 @@ const AppSwiper = (props: AppSwiperProps) => {
     <Swiper
       className={baseSwiperClassName}
       slidesPerView={1}
+      loop={true}
       mousewheel={true}
       speed={1600}
       autoplay={{ ...autoPlayConfig?.config }}
       modules={[...(autoPlayConfig?.autoPlayModule ?? [])]}
       direction={direction}
+      {...restProps}
     >
       {Children.toArray(
         slides.map(({ content, slideClassName }) => {
