@@ -42,7 +42,7 @@ const Introduction = (props: IntroductionProps) => {
 
   useLayoutEffect(() => {
     const scrollABit = () => {
-      window.scrollBy({ top: 50, behavior: "smooth" });
+      window.scrollBy({ top: 180, behavior: "smooth" });
     };
     const timeOut = setTimeout(() => scrollABit(), 1500);
 
