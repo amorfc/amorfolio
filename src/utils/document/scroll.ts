@@ -4,6 +4,8 @@ interface LetterScrollEffectConfig {
   opacityVariableName: string;
   maxOpacity?: number;
   minOpacity?: number;
+  onScrollStart?: () => void;
+  onScrollEnd?: () => void;
 }
 
 export const handleLetterScrollEffect = (params: LetterScrollEffectConfig) => {
@@ -13,6 +15,8 @@ export const handleLetterScrollEffect = (params: LetterScrollEffectConfig) => {
     opacityVariableName,
     maxOpacity = 1,
     minOpacity = 0.1,
+    onScrollEnd,
+    onScrollStart,
   } = params;
   const wrapperDoc = document.querySelector(`.${textWrapperClass}`);
   const letters = wrapperDoc?.querySelectorAll(`.${letterClass}`);
@@ -23,6 +27,8 @@ export const handleLetterScrollEffect = (params: LetterScrollEffectConfig) => {
       document.documentElement.clientHeight);
 
   if (!letters) return;
+  if (scrolled == 1) onScrollEnd?.();
+  if (scrolled < 1) onScrollStart?.();
 
   letters.forEach((letter, index) => {
     const indexLengthRatio = index / letters.length;
