@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   const profileSectionStyle = "lg:max-w-[35%] lg:h-full";
-  const [isIntroCompleted] = useState(false);
+  const [isIntroCompleted, setIsIntroCompleted] = useState(false);
 
   const portfolioSectionWrapperStyle = styleMerge(
     profileSectionStyle,
@@ -21,7 +21,9 @@ function App() {
 
   return (
     <AppLayout className={"gap-10 flex-col lg:flex-row"}>
-      <Introduction />
+      {!isIntroCompleted && (
+        <Introduction onIntroComplete={() => setIsIntroCompleted(true)} />
+      )}
       <SiteMetadata />
       {isIntroCompleted && (
         <>
