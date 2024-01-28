@@ -13,7 +13,7 @@ const useScrollIntoView = <T extends HTMLElement = HTMLElement>(
     (
       options: ScrollIntoViewOptions = {
         behavior: "smooth",
-        block: "end",
+        block: "center",
         inline: "nearest",
       }
     ) => {
