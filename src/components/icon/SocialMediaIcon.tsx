@@ -1,4 +1,4 @@
-import { SVGProps, useCallback } from "react";
+import { SVGProps, useCallback, useMemo } from "react";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
 import { SocialMedia } from "../../constants/common";
 import { IconSize } from "../../constants/sizeStyleConstants";
@@ -21,6 +21,7 @@ interface SocialMediaIconProps
     SVGProps<SVGSVGElement> {
   socialMedia: SocialMedia;
   redirectUrl?: string;
+  size?: number;
 }
 
 const SocialMediaComponents = {
@@ -35,14 +36,18 @@ const SocialMediaComponents = {
 };
 
 const SocialMediaIcon = (props: SocialMediaIconProps) => {
-  const { socialMedia, className, redirectUrl, ...restProps } = props;
+  const { socialMedia, className, redirectUrl, size, ...restProps } = props;
   const SocialMediaComponent = SocialMediaComponents[socialMedia];
 
   const handleOnClick = useCallback(() => {
     openInNewTab(getSocialMediaRedirectUrl(socialMedia, redirectUrl) ?? "");
   }, [socialMedia, redirectUrl]);
 
-  const wh = { width: IconSize.medium, height: IconSize.medium };
+  const wh = useMemo(() => {
+    const sizeResult = size ?? IconSize.medium;
+    return { width: sizeResult, height: sizeResult };
+  }, [size]);
+
   const finalClassName = styleMerge(
     "fill-icon hover:fill-iconActive hover:cursor-pointer hover:scale-[1.04]",
     className
