@@ -73,7 +73,7 @@ const Introduction = (props: IntroductionProps) => {
               onClick={handleOnLetsDiveInClick}
               className="flex-none"
               textClassName="text-title"
-              buttonText={"Let`s Dive In"}
+              buttonText={"Let's Dive In"}
             />
           )}
         </BaseView>
@@ -85,4 +85,4 @@ const Introduction = (props: IntroductionProps) => {
 
 export default Introduction;
 
-const text = `Hello! I'm Fatih Ermetin, also known as Amorf. I'm not just a software developer; I'm also a musician and vocalist. While composing songs, my passion lies in developing mobile applications and blockchain tools, contributing to open-source projects.I'm well-versed in the Cosmos ecosystem. Although I began my career in Fintech, I've explored other fields. Throughout my journey, I've consistently adhered to best practices and technical design patterns.`;
+const text = `Scroll end to continue :) Hello!  I'm Fatih Ermetin, also known as Amorf. I'm not just a software developer; I'm also a musician and vocalist. While composing songs, my passion lies in developing mobile applications and blockchain tools, contributing to open-source projects.I'm well-versed in the Cosmos ecosystem. Although I began my career in Fintech, I've explored other fields. Throughout my journey, I've consistently adhered to best practices and technical design patterns.`;

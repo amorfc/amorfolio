@@ -14,7 +14,7 @@ const IntroductionText = (props: IntroductionTextProps) => {
 
   return Children.toArray(
     wordsWithSpaces.map((word) => (
-      <BaseView className="flex-none flex-row ml-2">
+      <BaseView className="flex-none flex-row ml-1">
         {word.split("").map((letter) => (
           <TitleText
             text={letter}

@@ -115,7 +115,6 @@ body {
 @media (max-width: 768px) {
   .showon-scroll-text-container p {
     font-size: 3cqh;
-    line-height: 1.2cqh;
   }
 }
 @media (min-width: 768px) {
