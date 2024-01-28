@@ -13,6 +13,8 @@ import { HomeSection } from "./HomeSection";
 import ExperienceSection from "./experience/ExperienceSection";
 import AmorfolioUtils from "./amorfolio-utils/AmorfolioUtils";
 import { useScreenDetector } from "../../hooks/useScreenDetector";
+import ProjectSection from "./project/ProjectSection";
+import { projectData } from "../../data/project/projectData";
 
 interface PortfolioSectionProps extends PropsWithTwClassName {}
 
@@ -23,6 +25,13 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
   const jobExperienceSlides: SwiperSlideParams[] = useMemo(() => {
     return experienceData?.map((data) => ({
       content: createElement(ExperienceSection, { data }),
+      slideClassName: "overflow-hidden",
+    }));
+  }, []);
+
+  const projectsAndBlogs: SwiperSlideParams[] = useMemo(() => {
+    return projectData?.map((data) => ({
+      content: createElement(ProjectSection, { data }),
       slideClassName: "overflow-hidden",
     }));
   }, []);
@@ -45,7 +54,11 @@ export const PortfolioSection = (props: PortfolioSectionProps) => {
           />
         </HomeSection>
         <HomeSection className={homeSectionPartClassName}>
-          <AppSwiper slides={[]} isAutoPlay />
+          <AppSwiper
+            direction={swiperDirection}
+            slides={projectsAndBlogs}
+            isAutoPlay
+          />
         </HomeSection>
       </BaseView>
       <BaseView className="lg:max-h-[22%]">
