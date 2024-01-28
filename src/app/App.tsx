@@ -39,7 +39,7 @@ function App() {
           <Introduction />
           <BaseView
             className={styleMerge(
-              "fixed bottom-8 right-8 z-50",
+              "fixed bottom-4 right-8 z-50",
               appSectionsAnim
             )}
           >
