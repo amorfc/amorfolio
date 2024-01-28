@@ -7,31 +7,53 @@ import BaseView from "../components/view/BaseView";
 import SiteMetadata from "../metadata/SiteMetadata";
 import { styleMerge } from "../utils/style/styleMerge";
 import "./App.css";
+import NeuTextButton from "../components/button/NeuTextButton";
+import { SizeContants } from "../constants/sizeStyleConstants";
+import { useTwAppAnimation } from "../hooks/style/useTwAnimation";
 
 function App() {
-  const profileSectionStyle = "lg:max-w-[35%] lg:h-full";
   const [isIntroCompleted, setIsIntroCompleted] = useState(false);
 
+  const appSectionsAnim = useTwAppAnimation({
+    durationMs: 1000,
+    anim: "fade-up",
+  });
+
+  const profileSectionStyle = styleMerge(
+    "lg:max-w-[35%] lg:h-full",
+    appSectionsAnim
+  );
   const portfolioSectionWrapperStyle = styleMerge(
     profileSectionStyle,
+    appSectionsAnim,
     "lg:max-w-[65%] gap-y-7"
   );
 
-  const profileSection = styleMerge("gap-y-7 lg:h-full");
+  const portfolioSection = styleMerge("gap-y-7 lg:h-full");
 
   return (
     <AppLayout className={"gap-10 flex-col lg:flex-row"}>
-      {!isIntroCompleted && (
-        <Introduction onIntroComplete={() => setIsIntroCompleted(true)} />
-      )}
       <SiteMetadata />
+      {!isIntroCompleted && (
+        <BaseView className="">
+          <Introduction />
+          <BaseView className="fixed bottom-8 right-8 z-50">
+            <NeuTextButton
+              textSize={SizeContants.small}
+              onClick={() => setIsIntroCompleted(true)}
+              className="flex-none py-2 px-6 rounded-full"
+              buttonText={"Let's Dive In"}
+            />
+          </BaseView>
+        </BaseView>
+      )}
       {isIntroCompleted && (
         <>
           <BaseView className={profileSectionStyle}>
             <ProfileSection />
           </BaseView>
           <BaseView className={portfolioSectionWrapperStyle}>
-            <PortfolioSection className={profileSection} />
+            <PortfolioSection className={portfolioSection} />
           </BaseView>
         </>
       )}
