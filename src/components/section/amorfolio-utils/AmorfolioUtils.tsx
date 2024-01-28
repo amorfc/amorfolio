@@ -1,10 +1,4 @@
-import {
-  createElement,
-  useCallback,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { createElement, useCallback, useRef, useState } from "react";
 import { PropsWithTwClassName } from "../../../common/propsInterfaces";
 import { IconSize } from "../../../constants/sizeStyleConstants";
 import useScrollIntoView from "../../../hooks/scroll/useAppScrollIntoView";
@@ -48,21 +42,20 @@ const AmorfolioUtils = (props: AmorfolioUtilsProps) => {
   const wh = { width: IconSize.medium, height: IconSize.medium };
   const paintBucket = createElement(PaintBucketIcon, { ...wh });
 
-  const handleOnThemeButtonClick = useCallback(
-    () => setShowThemePicker(true),
-    [setShowThemePicker]
-  );
-  const closeThemePicker = useCallback(
-    () => setShowThemePicker(false),
-    [setShowThemePicker]
-  );
-
-  useLayoutEffect(() => {
+  const handleOnContainerScrolling = useCallback(() => {
     if (isMobile || isTablet) {
       scrollIntoUtilContainer();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [showThemePicker, scrollIntoUtilContainer]);
+  }, [isMobile, isTablet, scrollIntoUtilContainer]);
+
+  const handleOnThemeButtonClick = useCallback(() => {
+    setShowThemePicker(true);
+    handleOnContainerScrolling();
+  }, [setShowThemePicker, handleOnContainerScrolling]);
+  const closeThemePicker = useCallback(() => {
+    setShowThemePicker(false);
+    handleOnContainerScrolling();
+  }, [setShowThemePicker, handleOnContainerScrolling]);
 
   return (
     <BaseView ref={utilContainerRef} className="justify-center p-2">
