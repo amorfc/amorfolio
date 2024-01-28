@@ -35,9 +35,14 @@ function App() {
     <AppLayout className={"gap-10 flex-col lg:flex-row"}>
       <SiteMetadata />
       {!isIntroCompleted && (
-        <BaseView className="">
+        <BaseView>
           <Introduction />
-          <BaseView className="fixed bottom-8 right-8 z-50">
+          <BaseView
+            className={styleMerge(
+              "fixed bottom-8 right-8 z-50",
+              appSectionsAnim
+            )}
+          >
             <NeuTextButton
               textSize={SizeContants.small}
               onClick={() => setIsIntroCompleted(true)}
