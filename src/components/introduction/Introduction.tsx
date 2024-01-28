@@ -65,7 +65,7 @@ const Introduction = (props: IntroductionProps) => {
     <BaseView className={baseClassName}>
       <BaseView className={"relative flex-none w-full h-[400vh] overflow-auto"}>
         <BaseView
-          className={`fixed top-0 left-0 ${wrapper} flex-row flex-wrap h-[90vh] p-6 md:p-8 lg:p-4`}
+          className={`fixed top-0 left-0 ${wrapper} flex-row flex-wrap h-[90vh] px-6 md:p-8 lg:p-4`}
         >
           <IntroductionText text={text} letterClass={letterClass} />
           {showLetsDiveButton && (
