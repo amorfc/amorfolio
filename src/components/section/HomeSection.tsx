@@ -1,6 +1,6 @@
 import { SizeContants } from "../../constants/sizeStyleConstants";
 import { styleMerge } from "../../utils/style/styleMerge";
-import SubTitleText from "../text/SubTitleText";
+import TitleText from "../text/TitleText";
 import BaseView from "../view/BaseView";
 import { BaseSection, BaseSectionProps } from "./BaseSection";
 
@@ -19,7 +19,7 @@ export const HomeSection = (props: HomeSectionProps) => {
     <BaseSection {...restProps} className={styleClassName}>
       {title && (
         <BaseView className={titleContainerClassName}>
-          <SubTitleText text={title} size={SizeContants.xsmall} />
+          <TitleText text={title} size={SizeContants.xsmall} />
         </BaseView>
       )}
       {children}
