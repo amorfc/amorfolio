@@ -38,18 +38,18 @@ const ProjectSection = (props: ProjectSectionProps) => {
           />
           {showLogosSection && (
             <BaseView className="flex-none flex-wrap mt-4 flex-row gap-2">
-              {redirectUrl && (
-                <SocialMediaIcon
-                  size={IconSize.small}
-                  redirectUrl={redirectUrl}
-                  socialMedia={SocialMedia.Website}
-                />
-              )}
               {sourceCodeUrl && (
                 <SocialMediaIcon
                   size={IconSize.small}
                   redirectUrl={sourceCodeUrl}
                   socialMedia={SocialMedia.Github}
+                />
+              )}
+              {redirectUrl && (
+                <SocialMediaIcon
+                  size={IconSize.small}
+                  redirectUrl={redirectUrl}
+                  socialMedia={SocialMedia.Website}
                 />
               )}
             </BaseView>

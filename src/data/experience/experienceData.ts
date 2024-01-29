@@ -1,4 +1,6 @@
+import { SocialMedia } from "../../constants/common";
 import { ImagePublicUrls } from "../../constants/imagePublicUrlConstants";
+import { getSocialMediaRedirectUrl } from "../../utils/redirect";
 import { SkillType, Skills } from "../skillsData";
 
 export interface ExperienceTechStackType {
@@ -15,7 +17,8 @@ export interface ExperienceType {
   description: string;
   skills: SkillType[];
   imgPublicUrl: ImagePublicUrls;
-  link: string;
+  websiteUrl?: string;
+  linkedinUrl?: string;
 }
 
 export const experienceData: ExperienceType[] = [
@@ -30,8 +33,8 @@ export const experienceData: ExperienceType[] = [
       Crafted an intuitive and user-friendly web interface for the crypto staking service, utilizing modern web development tools. Result: an appealing, responsive interface for seamless staking activity management.
     `,
     skills: [],
-    imgPublicUrl: ImagePublicUrls.Profile, // Replace with the actual image public URL
-    link: "https://via.placeholder.com/150", // Replace with the actual link
+    imgPublicUrl: ImagePublicUrls.DigitalNomad, // Replace with the actual image public URL
+    linkedinUrl: getSocialMediaRedirectUrl(SocialMedia.LinkedIn),
   },
   {
     company: "Beyn Technology",
@@ -48,7 +51,8 @@ export const experienceData: ExperienceType[] = [
       // Add technologies for this experience if applicable
     ],
     imgPublicUrl: ImagePublicUrls.BeynTechnology, // Replace with the actual image public URL
-    link: "https://via.placeholder.com/150", // Replace with the actual link
+    websiteUrl: "https://beyn.com.tr/", // Replace with the actual link,
+    linkedinUrl: "https://www.linkedin.com/company/beyn-technology/",
   },
   {
     company: "KolayBi` Company",
@@ -69,7 +73,8 @@ export const experienceData: ExperienceType[] = [
       Skills.Node,
     ],
     imgPublicUrl: ImagePublicUrls.Kolaybi, // Replace with the actual image public URL
-    link: "https://via.placeholder.com/150", // Replace with the actual link
+    websiteUrl: "https://www.kolaybi.com/", // Replace with the actual link,
+    linkedinUrl: "https://www.linkedin.com/company/kolaybi/",
   },
   {
     company: "Techbros",
@@ -86,7 +91,6 @@ export const experienceData: ExperienceType[] = [
       // Add technologies for this experience if applicable
     ],
     imgPublicUrl: ImagePublicUrls.Techbros, // Replace with the actual image public URL
-    link: "https://via.placeholder.com/150", // Replace with the actual link
   },
   {
     company: "Appcent",
@@ -104,6 +108,7 @@ export const experienceData: ExperienceType[] = [
       // Add technologies for this experience if applicable
     ],
     imgPublicUrl: ImagePublicUrls.Appcent, // Replace with the actual image public URL
-    link: "https://via.placeholder.com/150", // Replace with the actual link
+    websiteUrl: "https://www.appcent.mobi/", // Replace with the actual link,
+    linkedinUrl: "https://www.linkedin.com/company/appcent/",
   },
 ];

@@ -14,7 +14,7 @@ export const projectData: ProjectType[] = [
     description: `You are here! Amorfolio is a portfolio website template designed to showcase your work and experience. It is built with React, TypeScript, and TailwindCSS. The website is fully responsive and customizable. The source code is available for free on GitHub.`,
     imgPublicUrl: ImagePublicUrls.Profile,
     redirectUrl: "https://amorfolio/",
-    sourceCodeUrl: "https://github.com/orgs/hoodrunio/dashboard",
+    sourceCodeUrl: "https://github.com/amorfc/amorfolio",
   },
   {
     projectName: "Hoodrun",
