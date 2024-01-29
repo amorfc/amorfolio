@@ -8,14 +8,3 @@ export enum SocialMedia {
   Spotify = "spotify",
   Website = "website",
 }
-
-const metadata = {
-  title: "Fatih Ermetin Portfolio",
-  site: "Fatih Ermetin Portfolio",
-  siteUrl: "https://amorfolio.vercel.app/",
-  openGraph: {
-    title: "Fatih Ermetin Portfolio",
-    description: "Come and see my portfolio which amorfolio :) !",
-    images: [``],
-  },
-};
