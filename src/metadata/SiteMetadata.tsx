@@ -1,7 +1,17 @@
-import { metadata } from "../constants/common";
 import { Helmet } from "react-helmet";
 
 const SiteMetadata = () => {
+  const metadata = {
+    title: "Fatih Ermetin Portfolio",
+    site: "Fatih Ermetin Portfolio",
+    siteUrl: "https://amorfolio.vercel.app/",
+    openGraph: {
+      title: "Fatih Ermetin Portfolio",
+      description: "Come and see my portfolio which amorfolio :) !",
+      images: [``],
+    },
+  };
+
   const ogTitle = metadata.openGraph.title;
   const ogDesc = metadata.openGraph.description;
   return (

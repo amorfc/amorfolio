@@ -9,7 +9,7 @@ export enum SocialMedia {
   Website = "website",
 }
 
-export const metadata = {
+const metadata = {
   title: "Fatih Ermetin Portfolio",
   site: "Fatih Ermetin Portfolio",
   siteUrl: "https://amorfolio.vercel.app/",
