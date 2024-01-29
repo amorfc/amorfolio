@@ -18,19 +18,19 @@ const SiteMetadata = () => {
   return (
     <HelmetProvider>
       <Helmet>
-        <title data-rh="true">{metadata.title}</title>
-        <meta data-rh="true" property="og:site_name" content={metadata.title} />
-        <meta data-rh="true" property="og:site" content={metadata.site} />
-        <meta data-rh={true} property="og:url" content={metadata.siteUrl} />
-        <meta data-rh="true" property="og:title" content={ogTitle} />
-        <meta data-rh="true" property="og:description" content={ogDesc} />
-        <meta data-rh="true" property="og:image" content={ogImage} />
-        <meta data-rh="true" property="og:type" content="website" />
-        <meta data-rh="true" name="twitter:image" content={ogImage} />
-        <meta data-rh="true" name="twitter:title" content={ogTitle} />
-        <meta data-rh="true" name="twitter:description" content={ogDesc} />
-        <meta data-rh="true" name="description" content={ogDesc} />
-        <meta data-rh="true" name="title" content={ogTitle} />
+        <title>{metadata.title}</title>
+        <meta property="og:site_name" content={metadata.title} />
+        <meta property="og:url" content={metadata.siteUrl} />
+        <meta property="og:site" content={metadata.site} />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDesc} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDesc} />
+        <meta name="description" content={ogDesc} />
+        <meta name="title" content={ogTitle} />
       </Helmet>
     </HelmetProvider>
   );
