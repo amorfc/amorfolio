@@ -1,13 +1,28 @@
-import { PropsWithChildren } from "react";
-import { PropsWithTwClassName } from "../../common/propsInterfaces";
+import { SizeContants } from "../../constants/sizeStyleConstants";
 import { styleMerge } from "../../utils/style/styleMerge";
-import { BaseSection } from "./BaseSection";
+import SubTitleText from "../text/SubTitleText";
+import BaseView from "../view/BaseView";
+import { BaseSection, BaseSectionProps } from "./BaseSection";
 
-interface HomeSectionProps extends PropsWithChildren, PropsWithTwClassName {}
+interface HomeSectionProps extends BaseSectionProps {
+  title?: string;
+}
 
 export const HomeSection = (props: HomeSectionProps) => {
-  const { className } = props;
-  const styleClassName = styleMerge(className, "neu-rectangle");
+  const { className, children, title, ...restProps } = props;
+  const styleClassName = styleMerge(className, "neu-rectangle relative");
 
-  return <BaseSection {...props} className={styleClassName} />;
+  const titleContainerClassName =
+    "neu-rectangle p-2 px-4 rounded-3xl absolute top-[-8px] right-[-4px] z-20";
+
+  return (
+    <BaseSection {...restProps} className={styleClassName}>
+      {title && (
+        <BaseView className={titleContainerClassName}>
+          <SubTitleText text={title} size={SizeContants.xsmall} />
+        </BaseView>
+      )}
+      {children}
+    </BaseSection>
+  );
 };
