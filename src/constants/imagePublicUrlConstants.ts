@@ -6,4 +6,6 @@ export enum ImagePublicUrls {
   Techbros = "techbros_logo.jpeg",
   Nym = "nym_logo.png",
   Hoodrun = "hoodrun_logo.png",
+  BlockchainExplorer = "bc_explorer.png",
+  DigitalNomad = "digital_nomad.png",
 }
