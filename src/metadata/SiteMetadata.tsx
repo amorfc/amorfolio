@@ -8,7 +8,7 @@ const SiteMetadata = () => {
     openGraph: {
       title: "Fatih Ermetin Portfolio",
       description: "Come and see my portfolio which amorfolio :) !",
-      images: [`https://amorfolio.vercel.app/public/og/og-image.svg`],
+      images: [`https://amorfolio.vercel.app/og/og-image.svg`],
     },
   };
 
