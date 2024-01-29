@@ -16,7 +16,16 @@ const SiteMetadata = () => {
   const ogDesc = metadata.openGraph.description;
   const ogImage = metadata.openGraph.images[0];
   return (
-    <Helmet>
+    <Helmet
+      onChangeClientState={() => {
+        const metaDescription = document.querySelector(
+          'meta[name="description"]'
+        );
+        if (metaDescription) {
+          metaDescription.setAttribute("content", ogDesc || "");
+        }
+      }}
+    >
       <title data-rh="true">{metadata.title}</title>
       <meta data-rh="true" property="og:site_name" content={metadata.title} />
       <meta data-rh="true" property="og:site" content={metadata.site} />
