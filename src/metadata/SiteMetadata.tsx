@@ -18,15 +18,16 @@ const SiteMetadata = () => {
   return (
     <Helmet>
       <title data-react-helmet={true}>{metadata.title}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
         data-react-helmet="true"
         property="og:site_name"
-        content={"metadata.title"}
+        content={metadata.title}
       />
       <meta
         data-react-helmet="true"
         property="og:site"
-        content={"metadata.site"}
+        content={metadata.site}
       />
       <meta
         data-react-helmet={true}
