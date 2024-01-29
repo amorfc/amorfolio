@@ -33,7 +33,9 @@ function App() {
 
   return (
     <AppLayout className={"gap-10 flex-col lg:flex-row"}>
-      <SiteMetadata />
+      <head>
+        <SiteMetadata />
+      </head>
       {!isIntroCompleted && (
         <BaseView>
           <Introduction />

@@ -8,12 +8,13 @@ const SiteMetadata = () => {
     openGraph: {
       title: "Fatih Ermetin Portfolio",
       description: "Come and see my portfolio which amorfolio :) !",
-      images: [``],
+      images: [`https://amorfolio.vercel.app/public/og/og-image.svg`],
     },
   };
 
   const ogTitle = metadata.openGraph.title;
   const ogDesc = metadata.openGraph.description;
+  const ogImage = metadata.openGraph.images[0];
   return (
     <Helmet>
       <title>{metadata.title}</title>
@@ -22,9 +23,9 @@ const SiteMetadata = () => {
       <meta property="og:url" content={metadata.siteUrl} />
       <meta property="og:title" content={ogTitle} />
       <meta property="og:description" content={ogDesc} />
-      {/* <meta property="og:image" content={ogImage} /> */}
+      <meta property="og:image" content={ogImage} />
       <meta property="og:type" content="website" />
-      {/* <meta name="twitter:image" content={ogImage} /> */}
+      <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:title" content={ogTitle} />
       <meta name="twitter:description" content={ogDesc} />
       <meta name="description" content={ogDesc} />
