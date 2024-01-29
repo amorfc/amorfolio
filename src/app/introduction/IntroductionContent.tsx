@@ -28,7 +28,7 @@ const IntroductionContent = (props: IntroductionContentProps) => {
         <NeuTextButton
           textSize={SizeContants.small}
           onClick={handleOnLetDiveInClick}
-          textClassName="text-subtitle"
+          textClassName="text-desc"
           className="flex-none py-2 px-6 rounded-full"
           buttonText={"Let's Dive In"}
         />
