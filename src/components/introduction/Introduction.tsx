@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import { PropsWithTwClassName } from "../../common/propsInterfaces";
-import { handleLetterScrollEffect } from "../../utils/document/scroll";
+import { handleLetterScrollEffect } from "../../utils/document/introductionScroller";
 import { styleMerge } from "../../utils/style/styleMerge";
 import BaseView from "../view/BaseView";
 import IntroductionText from "./IntroductionText";
