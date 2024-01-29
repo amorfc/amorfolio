@@ -4,7 +4,7 @@ export interface SkillType {
   imgPublicUrl?: string;
 }
 
-export const Skills = {
+export const Skills: { [x: string]: SkillType } = {
   JavaScript: {
     key: "JavaScript",
     displayName: "JavaScript",
