@@ -18,18 +18,38 @@ const SiteMetadata = () => {
   return (
     <Helmet>
       <title>{metadata.title}</title>
-      <meta property="og:site_name" content={metadata.title} />
-      <meta property="og:site" content={metadata.site} />
-      <meta property="og:url" content={metadata.siteUrl} />
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDesc} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:title" content={ogTitle} />
-      <meta name="twitter:description" content={ogDesc} />
-      <meta name="description" content={ogDesc} />
-      <meta name="title" content={ogTitle} />
+      <meta
+        data-react-helmet="true"
+        property="og:site_name"
+        content={metadata.title}
+      />
+      <meta
+        data-react-helmet="true"
+        property="og:site"
+        content={metadata.site}
+      />
+      <meta
+        data-react-helmet="true"
+        property="og:url"
+        content={metadata.siteUrl}
+      />
+      <meta data-react-helmet="true" property="og:title" content={ogTitle} />
+      <meta
+        data-react-helmet="true"
+        property="og:description"
+        content={ogDesc}
+      />
+      <meta data-react-helmet="true" property="og:image" content={ogImage} />
+      <meta data-react-helmet="true" property="og:type" content="website" />
+      <meta data-react-helmet="true" name="twitter:image" content={ogImage} />
+      <meta data-react-helmet="true" name="twitter:title" content={ogTitle} />
+      <meta
+        data-react-helmet="true"
+        name="twitter:description"
+        content={ogDesc}
+      />
+      <meta data-react-helmet="true" name="description" content={ogDesc} />
+      <meta data-react-helmet="true" name="title" content={ogTitle} />
     </Helmet>
   );
 };
