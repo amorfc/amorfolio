@@ -15,12 +15,16 @@ const IntroductionText = (props: IntroductionTextProps) => {
   return Children.toArray(
     wordsWithSpaces.map((word) => (
       <BaseView className="flex-none flex-row ml-1">
-        {word.split("").map((letter) => (
-          <TitleText
-            text={letter}
-            className={styleMerge("text-desc tracking-wide", letterClass)}
-          />
-        ))}
+        {Children.toArray(
+          word
+            .split("")
+            .map((letter) => (
+              <TitleText
+                text={letter}
+                className={styleMerge("text-desc tracking-wide", letterClass)}
+              />
+            ))
+        )}
       </BaseView>
     ))
   );

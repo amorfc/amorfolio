@@ -11,9 +11,7 @@ const App = () => {
   const setIntroCompleted = useCallback(() => setIsIntroCompleted(true), []);
   return (
     <AppLayout className={"gap-10 flex-col lg:flex-row"}>
-      <head>
-        <SiteMetadata />
-      </head>
+      <SiteMetadata />
       {!isIntroCompleted && (
         <IntroductionContent onLetDiveInClick={setIntroCompleted} />
       )}
