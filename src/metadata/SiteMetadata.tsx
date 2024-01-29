@@ -16,30 +16,32 @@ const SiteMetadata = () => {
   const ogDesc = metadata.openGraph.description;
   const ogImage = metadata.openGraph.images[0];
   return (
-    <Helmet
-      onChangeClientState={() => {
-        const metaDescription = document.querySelector(
-          'meta[name="twitter:description"]'
-        );
-        if (metaDescription) {
-          metaDescription.setAttribute("content", ogDesc || "");
-        }
-      }}
-    >
-      <title data-rh="true">{metadata.title}</title>
-      <meta data-rh="true" property="og:site_name" content={metadata.title} />
-      <meta data-rh="true" property="og:site" content={metadata.site} />
-      <meta data-rh={true} property="og:url" content={metadata.siteUrl} />
-      <meta data-rh="true" property="og:title" content={ogTitle} />
-      <meta data-rh="true" property="og:description" content={ogDesc} />
-      <meta data-rh="true" property="og:image" content={ogImage} />
-      <meta data-rh="true" property="og:type" content="website" />
-      <meta data-rh="true" name="twitter:image" content={ogImage} />
-      <meta data-rh="true" name="twitter:title" content={ogTitle} />
-      <meta data-rh="true" name="twitter:description" content={ogDesc} />
-      <meta data-rh="true" name="description" content={ogDesc} />
-      <meta data-rh="true" name="title" content={ogTitle} />
-    </Helmet>
+    <script>
+      <Helmet
+        onChangeClientState={() => {
+          const metaDescription = document.querySelector(
+            'meta[name="twitter:description"]'
+          );
+          if (metaDescription) {
+            metaDescription.setAttribute("content", ogDesc || "");
+          }
+        }}
+      >
+        <title data-rh="true">{metadata.title}</title>
+        <meta data-rh="true" property="og:site_name" content={metadata.title} />
+        <meta data-rh="true" property="og:site" content={metadata.site} />
+        <meta data-rh={true} property="og:url" content={metadata.siteUrl} />
+        <meta data-rh="true" property="og:title" content={ogTitle} />
+        <meta data-rh="true" property="og:description" content={ogDesc} />
+        <meta data-rh="true" property="og:image" content={ogImage} />
+        <meta data-rh="true" property="og:type" content="website" />
+        <meta data-rh="true" name="twitter:image" content={ogImage} />
+        <meta data-rh="true" name="twitter:title" content={ogTitle} />
+        <meta data-rh="true" name="twitter:description" content={ogDesc} />
+        <meta data-rh="true" name="description" content={ogDesc} />
+        <meta data-rh="true" name="title" content={ogTitle} />
+      </Helmet>
+    </script>
   );
 };
 
