@@ -19,7 +19,7 @@ const SiteMetadata = () => {
     <Helmet
       onChangeClientState={() => {
         const metaDescription = document.querySelector(
-          'meta[name="description"]'
+          'meta[name="twitter:description"]'
         );
         if (metaDescription) {
           metaDescription.setAttribute("content", ogDesc || "");
