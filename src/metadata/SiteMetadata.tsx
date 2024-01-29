@@ -17,40 +17,19 @@ const SiteMetadata = () => {
   const ogImage = metadata.openGraph.images[0];
   return (
     <Helmet>
-      <title data-react-helmet={true}>{metadata.title}</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta
-        data-react-helmet="true"
-        property="og:site_name"
-        content={metadata.title}
-      />
-      <meta
-        data-react-helmet="true"
-        property="og:site"
-        content={metadata.site}
-      />
-      <meta
-        data-react-helmet={true}
-        property="og:url"
-        content={metadata.siteUrl}
-      />
-      <meta data-react-helmet="true" property="og:title" content={ogTitle} />
-      <meta
-        data-react-helmet="true"
-        property="og:description"
-        content={ogDesc}
-      />
-      <meta data-react-helmet="true" property="og:image" content={ogImage} />
-      <meta data-react-helmet="true" property="og:type" content="website" />
-      <meta data-react-helmet="true" name="twitter:image" content={ogImage} />
-      <meta data-react-helmet="true" name="twitter:title" content={ogTitle} />
-      <meta
-        data-react-helmet="true"
-        name="twitter:description"
-        content={ogDesc}
-      />
-      <meta data-react-helmet="true" name="description" content={ogDesc} />
-      <meta data-react-helmet="true" name="title" content={ogTitle} />
+      <title data-rh="true">{metadata.title}</title>
+      <meta data-rh="true" property="og:site_name" content={metadata.title} />
+      <meta data-rh="true" property="og:site" content={metadata.site} />
+      <meta data-rh={true} property="og:url" content={metadata.siteUrl} />
+      <meta data-rh="true" property="og:title" content={ogTitle} />
+      <meta data-rh="true" property="og:description" content={ogDesc} />
+      <meta data-rh="true" property="og:image" content={ogImage} />
+      <meta data-rh="true" property="og:type" content="website" />
+      <meta data-rh="true" name="twitter:image" content={ogImage} />
+      <meta data-rh="true" name="twitter:title" content={ogTitle} />
+      <meta data-rh="true" name="twitter:description" content={ogDesc} />
+      <meta data-rh="true" name="description" content={ogDesc} />
+      <meta data-rh="true" name="title" content={ogTitle} />
     </Helmet>
   );
 };
