@@ -17,16 +17,16 @@ const SiteMetadata = () => {
   const ogImage = metadata.openGraph.images[0];
   return (
     <Helmet>
-      <title>{metadata.title}</title>
+      <title>{"metadata.title"}</title>
       <meta
         data-react-helmet="true"
         property="og:site_name"
-        content={metadata.title}
+        content={"metadata.title"}
       />
       <meta
         data-react-helmet="true"
         property="og:site"
-        content={metadata.site}
+        content={"metadata.site"}
       />
       <meta
         data-react-helmet="true"
