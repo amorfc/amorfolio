@@ -9,7 +9,7 @@ interface NeuLabelProps extends PropsWithTwClassName {
 const NeuLabel = (props: NeuLabelProps) => {
   const { label, className } = props;
   const baseClassName = styleMerge(
-    "neu-rectangle neu-inset rounded-3xl py-1 px-4",
+    "neu-rectangle neu-inset rounded-3xl py-1 px-4 text-nowrap",
     className
   );
   return (
