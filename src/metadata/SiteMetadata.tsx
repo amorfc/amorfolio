@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const SiteMetadata = () => {
   const metadata = {
@@ -16,17 +16,8 @@ const SiteMetadata = () => {
   const ogDesc = metadata.openGraph.description;
   const ogImage = metadata.openGraph.images[0];
   return (
-    <script>
-      <Helmet
-        onChangeClientState={() => {
-          const metaDescription = document.querySelector(
-            'meta[name="twitter:description"]'
-          );
-          if (metaDescription) {
-            metaDescription.setAttribute("content", ogDesc || "");
-          }
-        }}
-      >
+    <HelmetProvider>
+      <Helmet>
         <title data-rh="true">{metadata.title}</title>
         <meta data-rh="true" property="og:site_name" content={metadata.title} />
         <meta data-rh="true" property="og:site" content={metadata.site} />
@@ -41,7 +32,7 @@ const SiteMetadata = () => {
         <meta data-rh="true" name="description" content={ogDesc} />
         <meta data-rh="true" name="title" content={ogTitle} />
       </Helmet>
-    </script>
+    </HelmetProvider>
   );
 };
 
