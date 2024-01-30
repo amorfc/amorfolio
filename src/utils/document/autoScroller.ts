@@ -1,13 +1,12 @@
-let scrollerElements: NodeListOf<Element> | null = null;
-
 export const initializeAutoScrollers = () => {
-  scrollerElements = document.querySelectorAll(".auto-scroller");
+  const scrollerElements = document.querySelectorAll(".auto-scroller");
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAutoScrollerAnimation();
+    addAutoScrollerAnimation(scrollerElements);
+    addAnimationPauseOnMobile(scrollerElements);
   }
 };
 
-function addAutoScrollerAnimation() {
+function addAutoScrollerAnimation(scrollerElements: NodeListOf<Element>) {
   scrollerElements?.forEach((scrollerElement) => {
     scrollerElement.setAttribute("data-animated", "true");
 
@@ -22,6 +21,19 @@ function addAutoScrollerAnimation() {
       const duplicatedItem = item.cloneNode(true) as Element;
       duplicatedItem.setAttribute("aria-hidden", "true");
       scrollInnerElement.appendChild(duplicatedItem);
+    });
+  });
+}
+
+function addAnimationPauseOnMobile(scrollerElements: NodeListOf<Element>) {
+  scrollerElements?.forEach((scrollerElement) => {
+    const htmlElement = scrollerElement as HTMLElement;
+    htmlElement.setAttribute("data-animated", "true");
+    htmlElement.addEventListener("touchstart", function () {
+      htmlElement.style.animationPlayState = "paused";
+    });
+    htmlElement.addEventListener("touchend", function () {
+      htmlElement.style.animationPlayState = "running";
     });
   });
 }
