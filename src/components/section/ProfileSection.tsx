@@ -32,7 +32,7 @@ export const ProfileSection = () => {
           )}
         </BaseView>
       </BaseView>
-      <BaseView className="neu-rectangle neu-inset rounded-3xl basis-[65%] mt-2 xl:m-5 p-4 text-center items-center justify-center">
+      <BaseView className="neu-rectangle neu-inset rounded-3xl basis-[65%] mt-2 xl:m-5 p-2 m-2 text-center items-center justify-center">
         <BaseView className="text-center items-center justify-center">
           <DescriptionText text={profileSection.profile.description} />
         </BaseView>
