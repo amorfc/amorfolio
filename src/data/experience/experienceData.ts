@@ -1,7 +1,7 @@
 import { SocialMedia } from "../../constants/common";
 import { ImagePublicUrls } from "../../constants/imagePublicUrlConstants";
 import { getSocialMediaRedirectUrl } from "../../utils/redirect";
-import { SkillType, Skills } from "../skillsData";
+import { SkillType } from "../skillsData";
 
 export interface ExperienceTechStackType {
   name: string;
@@ -65,13 +65,7 @@ export const experienceData: ExperienceType[] = [
     Maintained and added new features to an existing web application built with React.
     Supported the CRM frontend team with architectural guidance.
     `,
-    skills: [
-      Skills.JavaScript,
-      Skills.TypeScript,
-      Skills.React,
-      Skills.Next,
-      Skills.Node,
-    ],
+    skills: [],
     imgPublicUrl: ImagePublicUrls.Kolaybi, // Replace with the actual image public URL
     websiteUrl: "https://www.kolaybi.com/", // Replace with the actual link,
     linkedinUrl: "https://www.linkedin.com/company/kolaybi/",
