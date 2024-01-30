@@ -44,7 +44,7 @@ const Introduction = (props: IntroductionProps) => {
     const scrollABit = () => {
       window.scrollBy({ top: 180, behavior: "smooth" });
     };
-    const timeOut = setTimeout(() => scrollABit(), 1500);
+    const timeOut = setTimeout(() => scrollABit(), 1100);
 
     return () => clearTimeout(timeOut);
   }, []);
