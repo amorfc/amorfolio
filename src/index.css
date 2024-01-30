@@ -142,13 +142,13 @@ body {
   --auto-scroller_animation-direction: forwards;
 }
 .auto-scroller[data-speed="fast"] {
-  --auto-scroller_animation-duration: 40s;
+  --auto-scroller_animation-duration: 30s;
 }
 .auto-scroller[data-speed="normal"] {
-  --auto-scroller_animation-duration: 80s;
+  --auto-scroller_animation-duration: 60s;
 }
 .auto-scroller[data-speed="slow"] {
-  --auto-scroller_animation-duration: 120s;
+  --auto-scroller_animation-duration: 00s;
 }
 
 @keyframes auto-scroll-anim {
