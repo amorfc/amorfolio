@@ -112,6 +112,10 @@ body {
   margin: 0;
 }
 
+.auto-scroller:hover[data-animated="true"] .auto-scroller_inner {
+  animation-play-state: paused; /* Pause on hover */
+}
+
 .auto-scroller[data-animated="true"] {
   overflow: hidden;
   /*for chromium*/
