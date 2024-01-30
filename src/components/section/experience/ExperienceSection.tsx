@@ -68,7 +68,6 @@ const ExperienceSection = (props: ExperienceSectionProps) => {
           />
         </BaseView>
       </BaseView>
-      {/* <ExperienceSectionSkillList className={"rounded-xl"} data={skills} /> */}
     </BaseView>
   );
 };
