@@ -88,22 +88,6 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-.h-scrollGradient {
-  background-image: linear-gradient(
-      to right,
-      var(--color-secondary),
-      var(--color-secondary)
-    ),
-    linear-gradient(to right, var(--color-secondary), var(--color-secondary)),
-    linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
-    linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
-  background-position: left center, right center, left center, right center;
-  background-repeat: no-repeat;
-  background-color: var(--color-secondary);
-  background-size: 30px 100%, 30px 100%, 20px 100%, 20px 100%;
-  background-attachment: local, local, scroll, scroll;
-}
-
 .showon-scroll-text-container {
 }
 
@@ -121,5 +105,50 @@ body {
   .showon-scroll-text-container p {
     font-size: 3.8cqmax;
     line-height: 4.2cqw;
+  }
+}
+
+.auto-scroller {
+  margin: 0;
+}
+
+.auto-scroller[data-animated="true"] {
+  overflow: hidden;
+  /*for chromium*/
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+.auto-scroller[data-animated="true"] .auto-scroller_inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: auto-scroll-anim var(--auto-scroller_animation-duration, 50s)
+    var(--auto-scroller_animation-direction, forwards) linear infinite;
+}
+
+.auto-scroller[data-direction="right"] {
+  --auto-scroller_animation-direction: reverse;
+}
+.auto-scroller[data-direction="left"] {
+  --auto-scroller_animation-direction: forwards;
+}
+.auto-scroller[data-speed="fast"] {
+  --auto-scroller_animation-duration: 20s;
+}
+.auto-scroller[data-speed="normal"] {
+  --auto-scroller_animation-duration: 40s;
+}
+.auto-scroller[data-speed="slow"] {
+  --auto-scroller_animation-duration: 60s;
+}
+
+@keyframes auto-scroll-anim {
+  to {
+    transform: translate(-50%);
   }
 }
