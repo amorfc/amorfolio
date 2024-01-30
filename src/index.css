@@ -145,10 +145,10 @@ body {
   --auto-scroller_animation-duration: 40s;
 }
 .auto-scroller[data-speed="normal"] {
-  --auto-scroller_animation-duration: 50s;
+  --auto-scroller_animation-duration: 80s;
 }
 .auto-scroller[data-speed="slow"] {
-  --auto-scroller_animation-duration: 60s;
+  --auto-scroller_animation-duration: 120s;
 }
 
 @keyframes auto-scroll-anim {
