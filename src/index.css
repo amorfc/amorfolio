@@ -113,7 +113,7 @@ body {
 }
 
 .auto-scroller:hover[data-animated="true"] .auto-scroller_inner {
-  animation-play-state: paused; /* Pause on hover */
+  animation-play-state: paused;
 }
 
 .auto-scroller[data-animated="true"] {
@@ -148,7 +148,7 @@ body {
   --auto-scroller_animation-duration: 60s;
 }
 .auto-scroller[data-speed="slow"] {
-  --auto-scroller_animation-duration: 00s;
+  --auto-scroller_animation-duration: 90s;
 }
 
 @keyframes auto-scroll-anim {
