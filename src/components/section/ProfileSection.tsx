@@ -1,22 +1,20 @@
 import { Children } from "react";
 import { SocialMedia } from "../../constants/common";
 import { profileSection } from "../../data/profileSection";
+import { displaySkillsList } from "../../data/skillsData";
 import SocialMediaIcon from "../icon/SocialMediaIcon";
 import ProfileImage from "../image/ProfileImage";
+import SkillList from "../list/SkillList";
+import HAutoListScroller from "../scroll/HAutoListScroller";
 import DescriptionText from "../text/DescriptionText";
 import BaseCircleView from "../view/BaseCircleView";
 import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";
-import { Skills } from "../../data/skillsData";
-import HAutoListScroller from "../scroll/HAutoListScroller";
-import SkillList from "../list/SkillList";
 
 export const ProfileSection = () => {
   const baseCircleViewClassName = "neu-circle m-8 my-4";
 
   const ignoredSocialMedias = [SocialMedia.Website];
-
-  const tempSkills = Object.values(Skills);
 
   return (
     <HomeSection className="overflow-hidden">
@@ -38,10 +36,10 @@ export const ProfileSection = () => {
         </BaseView>
         <BaseView className="flex-none flex-0 max-w-full max-h-full">
           <HAutoListScroller>
-            <SkillList data={tempSkills} />
+            <SkillList data={displaySkillsList.primary} />
           </HAutoListScroller>
           <HAutoListScroller direction="right">
-            <SkillList data={tempSkills} />
+            <SkillList data={displaySkillsList.secondary} />
           </HAutoListScroller>
         </BaseView>
       </BaseView>
