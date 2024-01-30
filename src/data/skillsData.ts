@@ -36,7 +36,7 @@ type SkillKeys =
   | "DockerCompose"
   | "AWS";
 
-export const Skills: Record<SkillKeys, SkillType> = {
+export const Skills: { [K in SkillKeys]: SkillType } = {
   JavaScript: {
     key: "JavaScript",
     displayName: "JavaScript",
