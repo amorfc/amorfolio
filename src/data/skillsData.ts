@@ -198,6 +198,7 @@ const primarySkills = [
   Skills.Redux,
   Skills.ReduxToolkit,
   Skills.ReduxToolKitQuery,
+  Skills.Angular,
   Skills.NextJS,
   Skills.NodeJS,
   Skills.ExpressJS,
