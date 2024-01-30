@@ -30,8 +30,8 @@ export const ProfileSection = () => {
           )}
         </BaseView>
       </BaseView>
-      <BaseView className="neu-rectangle neu-inset rounded-3xl my-2 xl:m-5 text-center items-center justify-center">
-        <BaseView className="text-center items-center justify-center p-4 md:p-0 lg:px-10">
+      <BaseView className="neu-rectangle neu-inset rounded-3xl my-2 py-2 xl:m-5 text-center items-center justify-center">
+        <BaseView className="text-center items-center justify-center px-4 py-2 md:p-0 lg:px-10">
           <DescriptionText text={profileSection.profile.description} />
         </BaseView>
         <BaseView className="flex-none flex-0 max-w-full max-h-full">
