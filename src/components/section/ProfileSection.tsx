@@ -7,11 +7,17 @@ import DescriptionText from "../text/DescriptionText";
 import BaseCircleView from "../view/BaseCircleView";
 import BaseView from "../view/BaseView";
 import { HomeSection } from "./HomeSection";
+import { Skills } from "../../data/skillsData";
+import HAutoListScroller from "../scroll/HAutoListScroller";
+import SkillList from "../list/SkillList";
 
 export const ProfileSection = () => {
   const baseCircleViewClassName = "neu-circle m-8 my-4";
 
   const ignoredSocialMedias = [SocialMedia.Website];
+
+  const tempSkills = Object.values(Skills);
+
   return (
     <HomeSection className="overflow-hidden">
       <BaseView className="basis-[35%] items-center justify-center">
@@ -27,7 +33,17 @@ export const ProfileSection = () => {
         </BaseView>
       </BaseView>
       <BaseView className="neu-rectangle neu-inset rounded-3xl basis-[65%] mt-2 xl:m-5 p-4 text-center items-center justify-center">
-        <DescriptionText text={profileSection.profile.description} />
+        <BaseView className="text-center items-center justify-center">
+          <DescriptionText text={profileSection.profile.description} />
+        </BaseView>
+        <BaseView className="flex-none flex-0 max-w-full max-h-full">
+          <HAutoListScroller>
+            <SkillList data={tempSkills} />
+          </HAutoListScroller>
+          <HAutoListScroller direction="right">
+            <SkillList data={tempSkills} />
+          </HAutoListScroller>
+        </BaseView>
       </BaseView>
     </HomeSection>
   );
