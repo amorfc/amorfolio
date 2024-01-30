@@ -14,6 +14,7 @@ type SkillKeys =
   | "ReduxToolkit"
   | "ReduxToolKitQuery"
   | "Angular"
+  | "ElectronJS"
   | "NextJS"
   | "NodeJS"
   | "ExpressJS"
@@ -76,6 +77,11 @@ export const Skills: { [K in SkillKeys]: SkillType } = {
     key: "ReduxToolkitQuery",
     displayName: "Redux Toolkit Query",
     imgPublicUrl: "/img/redux-toolkit-query.png",
+  },
+  ElectronJS: {
+    key: "ElectronJS",
+    displayName: "ElectronJS",
+    imgPublicUrl: "/img/electron.png",
   },
   Angular: {
     key: "Angular",
@@ -198,6 +204,8 @@ const primarySkills = [
   Skills.Redux,
   Skills.ReduxToolkit,
   Skills.ReduxToolKitQuery,
+  Skills.Angular,
+  Skills.ElectronJS,
   Skills.NextJS,
   Skills.NodeJS,
   Skills.ExpressJS,
