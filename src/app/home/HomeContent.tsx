@@ -1,7 +1,9 @@
+import { useLayoutEffect } from "react";
 import { PortfolioSection } from "../../components/section/PortfolioSection";
 import { ProfileSection } from "../../components/section/ProfileSection";
 import BaseView from "../../components/view/BaseView";
 import { useTwAppAnimation } from "../../hooks/style/useTwAnimation";
+import { initializeAutoScrollers } from "../../utils/document/autoScroller";
 import { styleMerge } from "../../utils/style/styleMerge";
 
 const HomeContent = () => {
@@ -15,6 +17,10 @@ const HomeContent = () => {
     appSectionsAnim,
     "lg:max-w-[65%] gap-y-7"
   );
+
+  useLayoutEffect(() => {
+    initializeAutoScrollers();
+  }, []);
 
   const portfolioSection = styleMerge("gap-y-7 lg:h-full");
   return (
