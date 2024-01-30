@@ -15,7 +15,7 @@ const BaseCircleView = (props: BaseCircleViewProps) => {
       case SizeContants.medium:
         return "w-[16vh] h-[16vh] lg:w-[20vh] lg:h-[20vh]";
       case SizeContants.large:
-        return "w-[25vh] h-[25vh] lg:w-[35vh] lg:h-[35vh]";
+        return "w-[20vh] h-[20vh]  md:w-[25vh] md:h-[25vh] lg:w-[35vh] lg:h-[35vh]";
       case SizeContants.small:
         return "w-[5vh] h-[5vh] lg:w-[7vh] lg:h-[7vh]";
     }
