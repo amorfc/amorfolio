@@ -13,7 +13,7 @@ export const projectData: ProjectType[] = [
     projectName: "Amorfolio",
     description: `You are here! Amorfolio is a portfolio website template designed to showcase your work and experience. It is built with React, TypeScript, and TailwindCSS. The website is fully responsive and customizable. The source code is available for free on GitHub.`,
     imgPublicUrl: ImagePublicUrls.Profile,
-    redirectUrl: "https://amorfolio/",
+    redirectUrl: "https://amorfolio.com",
     sourceCodeUrl: "https://github.com/amorfc/amorfolio",
   },
   {
@@ -21,7 +21,7 @@ export const projectData: ProjectType[] = [
     description: `HoodRun offers top-tier open-source technical software support for blockchain projects and staking services. As a founding member, I play a crucial role in leading the oversight of technical needs, actively contributing as part of this open-source community. My efforts ensure seamless integration and support for projects, fostering growth and success within our vibrant community.`,
     imgPublicUrl: ImagePublicUrls.Hoodrun,
     redirectUrl: "https://hoodrun.io/",
-    sourceCodeUrl: "https://github.com/orgs/hoodrunio/dashboard",
+    sourceCodeUrl: "https://github.com/orgs/hoodrunio",
   },
   {
     projectName: "Nym Updater",
@@ -39,5 +39,12 @@ export const projectData: ProjectType[] = [
     `,
     imgPublicUrl: ImagePublicUrls.BlockchainExplorer,
     sourceCodeUrl: "https://github.com/hoodrunio/explorer-backend",
+  },
+  {
+    projectName: "Axelar Telegram Bot",
+    description: `Axelar Validator Checker is a Node.js application designed to provide tracking features for running blockchain nodes, specifically tailored for Axelar network validators. The application includes a Telegram bot for monitoring validators' uptime, poll votes, supported EVM chains, and RPC health mechanism.`,
+    imgPublicUrl: ImagePublicUrls.AxelarLogo,
+    redirectUrl: "https://axelar.network/",
+    sourceCodeUrl: "https://github.com/hoodrunio/hoodrun_axelar_checker",
   },
 ];
