@@ -40,4 +40,11 @@ export const projectData: ProjectType[] = [
     imgPublicUrl: ImagePublicUrls.BlockchainExplorer,
     sourceCodeUrl: "https://github.com/hoodrunio/explorer-backend",
   },
+  {
+    projectName: "Axelar Telegram Bot",
+    description: `Axelar Validator Checker is a Node.js application designed to provide tracking features for running blockchain nodes, specifically tailored for Axelar network validators. The application includes a Telegram bot for monitoring validators' uptime, poll votes, supported EVM chains, and RPC health mechanism.`,
+    imgPublicUrl: ImagePublicUrls.AxelarLogo,
+    redirectUrl: "https://axelar.network/",
+    sourceCodeUrl: "https://github.com/hoodrunio/hoodrun_axelar_checker",
+  },
 ];
