@@ -10,10 +10,10 @@ export interface ProjectType {
 
 export const projectData: ProjectType[] = [
   {
-    projectName: "Amorfolio",
-    description: `You are here! Amorfolio is a portfolio website template designed to showcase your work and experience. It is built with React, TypeScript, and TailwindCSS. The website is fully responsive and customizable. The source code is available for free on GitHub.`,
-    imgPublicUrl: ImagePublicUrls.Profile,
-    redirectUrl: "https://amorfolio.com",
+    projectName: "Spark",
+    description: `This app is designed to help women feel safer in Istanbul’s busy streets and public transport hubs. Within a women-only community, you can rate neighborhoods, stations and venues on an interactive map, highlight places that feel safe or risky, and share your experiences—anonymously if you prefer. With filters for cafés, parks, beaches and more, it turns everyday stories into a living safety map of the city, empowering women to support and protect one another.`,
+    imgPublicUrl: ImagePublicUrls.Spark,
+    redirectUrl: "https://apps.apple.com/ca/app/spark-app/id6747137817",
     sourceCodeUrl: "https://github.com/amorfc/amorfolio",
   },
   {
@@ -46,5 +46,12 @@ export const projectData: ProjectType[] = [
     imgPublicUrl: ImagePublicUrls.AxelarLogo,
     redirectUrl: "https://axelar.network/",
     sourceCodeUrl: "https://github.com/hoodrunio/hoodrun_axelar_checker",
+  },
+  {
+    projectName: "Amorfolio",
+    description: `You are here! Amorfolio is a portfolio website template designed to showcase your work and experience. It is built with React, TypeScript, and TailwindCSS. The website is fully responsive and customizable. The source code is available for free on GitHub.`,
+    imgPublicUrl: ImagePublicUrls.Profile,
+    redirectUrl: "https://amorfolio.com",
+    sourceCodeUrl: "https://github.com/amorfc/amorfolio",
   },
 ];
