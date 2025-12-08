@@ -1,5 +1,6 @@
 export enum ImagePublicUrls {
   Profile = "profile.png",
+  Spark = "spark_logo.png",
   Appcent = "appcent_logo.jpeg",
   Kolaybi = "kolaybi_logo.jpeg",
   BeynTechnology = "beyn_technology_logo.jpeg",
